@@ -24379,25 +24379,25 @@
   ],
   "images": [
     {
-      "uri": "Outfit_BaseColor.png"
+      "uri": "outfit_basecolor.png"
     },
     {
-      "uri": "Bandage_BaseColor.png"
+      "uri": "bandage_basecolor.png"
     },
     {
-      "uri": "Glove_BaseColor.png"
+      "uri": "glove_basecolor.png"
     },
     {
-      "uri": "Headset_BaseColor.png"
+      "uri": "headset_basecolor.png"
     },
     {
-      "uri": "eyes_BaseColor.png"
+      "uri": "eyes_basecolor.png"
     },
     {
-      "uri": "Hair_BaseColor.png"
+      "uri": "hair_basecolor.png"
     },
     {
-      "uri": "Shoes_BaseColor.png"
+      "uri": "shoes_basecolor.png"
     }
   ],
   "textures": [

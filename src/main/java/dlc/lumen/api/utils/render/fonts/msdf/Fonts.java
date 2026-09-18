@@ -43,12 +43,14 @@ public class Fonts {
          long var4 = stringMap3.getOrDefault(var1, 0L);
          if (var2 >= var4) {
             try {
-               MsdfFont var6;
-               if (var1.contains("/")) {
-                  var6 = MsdfFont.builder().name(var1).dataFile("fonts/msdf/" + var1 + ".json").atlasFile("fonts/msdf/" + var1 + ".png").build();
-               } else {
-                  var6 = MsdfFont.builder().atlas(var1).data(var1).build();
-               }
+                MsdfFont var6;
+                if (var1.contains("/")) {
+                   var6 = MsdfFont.builder().name(var1).dataFile("fonts/msdf/" + var1 + ".json").atlasFile("fonts/msdf/" + var1 + ".png").build();
+                } else {
+                   // 1.21.11: имя обязательно — LumenText выбирает TTF-иконки по имени шрифта,
+                   // без имени иконки icon/icon1/iconnew рисовались дефолтным шрифтом (буквы вместо иконок).
+                   var6 = MsdfFont.builder().name(var1).atlas(var1).data(var1).build();
+                }
 
                stringMap.put(var1, var6);
                Font[] var7 = new Font[100];

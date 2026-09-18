@@ -8,6 +8,7 @@ import dlc.lumen.client.modules.impl.render.ShaderHands;
 import dlc.lumen.client.modules.impl.render.SwingAnimations;
 import dlc.lumen.client.modules.impl.render.ViewModel;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.item.ItemModelManager;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -24,6 +25,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -45,8 +47,11 @@ public abstract class HeldItemRendererMixin {
    private float field_4051;
    @Shadow
    private float field_4052;
-   @Shadow
-   private ItemStack field_4048;
+    @Shadow
+    private ItemStack field_4048;
+    @Shadow
+    @Final
+    private ItemModelManager itemModelManager;
    @Unique
    private int lumen$zenithSlashSide = -1;
    @Unique
@@ -355,26 +360,31 @@ public abstract class HeldItemRendererMixin {
       return (float)(Math.pow(2.0, -10.0 * x) * Math.sin((x * 10.0 - 0.75) * c4) + 1.0);
    }
 
-   @Overwrite
-   public void method_22976(float tickDelta, MatrixStack matrices, OrderedRenderCommandQueue queue, ClientPlayerEntity player, int light) {
-      float f = player.getHandSwingProgress(tickDelta);
-      Hand hand = (Hand)MoreObjects.firstNonNull(player.preferredHand, Hand.MAIN_HAND);
-      float g = player.getLerpedPitch(tickDelta);
-      HandRenderType handRenderType = HeldItemRenderer.getHandRenderType(player);
-      float h = MathHelper.lerp(tickDelta, player.lastRenderPitch, player.renderPitch);
-      float i = MathHelper.lerp(tickDelta, player.lastRenderYaw, player.renderYaw);
-      if (handRenderType.renderMainHand) {
-         float j = hand == Hand.MAIN_HAND ? f : 0.0F;
-         float k = 1.0F - MathHelper.lerp(tickDelta, this.field_4053, this.field_4043);
-         this.method_3228(player, tickDelta, g, Hand.MAIN_HAND, j, this.field_4047, k, matrices, queue, light);
-      }
+    @Overwrite
+    public void method_22976(float tickDelta, MatrixStack matrices, OrderedRenderCommandQueue queue, ClientPlayerEntity player, int light) {
+       float f = player.getHandSwingProgress(tickDelta);
+       Hand hand = (Hand)MoreObjects.firstNonNull(player.preferredHand, Hand.MAIN_HAND);
+       float g = player.getLerpedPitch(tickDelta);
+       HandRenderType handRenderType = HeldItemRenderer.getHandRenderType(player);
+       float h = MathHelper.lerp(tickDelta, player.lastRenderPitch, player.renderPitch);
+       float i = MathHelper.lerp(tickDelta, player.lastRenderYaw, player.renderYaw);
+       // 1.21.11: ванила доворачивает руки за головой (иначе рука "заморожена" и не следует за взглядом).
+       matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees((player.getPitch(tickDelta) - h) * 0.1F));
+       matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees((player.getYaw(tickDelta) - i) * 0.1F));
+       if (handRenderType.renderMainHand) {
+          float j = hand == Hand.MAIN_HAND ? f : 0.0F;
+          float k = this.itemModelManager.getSwapAnimationScale(this.field_4047)
+             * (1.0F - MathHelper.lerp(tickDelta, this.field_4053, this.field_4043));
+          this.method_3228(player, tickDelta, g, Hand.MAIN_HAND, j, this.field_4047, k, matrices, queue, light);
+       }
 
-      if (handRenderType.renderOffHand) {
-         float j = hand == Hand.OFF_HAND ? f : 0.0F;
-         float k = 1.0F - MathHelper.lerp(tickDelta, this.field_4051, this.field_4052);
-         this.method_3228(player, tickDelta, g, Hand.OFF_HAND, j, this.field_4048, k, matrices, queue, light);
-      }
-   }
+       if (handRenderType.renderOffHand) {
+          float j = hand == Hand.OFF_HAND ? f : 0.0F;
+          float k = this.itemModelManager.getSwapAnimationScale(this.field_4048)
+             * (1.0F - MathHelper.lerp(tickDelta, this.field_4051, this.field_4052));
+          this.method_3228(player, tickDelta, g, Hand.OFF_HAND, j, this.field_4048, k, matrices, queue, light);
+       }
+    }
 
    @Inject(method = "applyEatOrDrinkTransformation", at = @At("HEAD"), cancellable = true)
    private void onApplyEatOrDrinkTransformation(MatrixStack matrices, float tickDelta, Arm arm, ItemStack stack, PlayerEntity player, CallbackInfo ci) {
