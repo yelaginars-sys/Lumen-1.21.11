@@ -23,6 +23,7 @@ import net.minecraft.util.Identifier;
  */
 public final class LumenText implements QClient {
    private static final float ICON_BASE_SIZE = 20.0F;
+   private static final float TEXT_BASE_SIZE = 16.0F;
 
    private LumenText() {
    }
@@ -40,6 +41,10 @@ public final class LumenText implements QClient {
          // icons/iconz без TTF — фолбэк на monoton: буквы-иконки совпадают частично,
          // остальное добьёт missing-glyph. Лучше, чем ванильные буквы вместо иконок.
          case "icons", "iconz" -> Identifier.of("lumen", "icon");
+         // Текстовые шрифты — кастомный TTF (Narezka + фолбэк), а не дефолт ванилы.
+         // Иначе весь HUD рисуется ванильным шрифтом.
+         case "suisse", "inter_medium", "sf_regular", "narezka", "lumen", "logo", "wave", "energy", "tyzik", "wonderful" ->
+            Identifier.of("lumen", "suisse");
          default -> null;
       };
    }
@@ -58,6 +63,10 @@ public final class LumenText implements QClient {
          case "icon", "icon1", "iconnew", "icons", "iconz" -> true;
          default -> false;
       };
+   }
+
+   private static boolean isCustomText(String font) {
+      return fontId(font) != null && !isIcon(font);
    }
 
    private static final class Seg {
@@ -188,6 +197,8 @@ public final class LumenText implements QClient {
       float w = tr.getWidth(buildText(font, text, 0xFFFFFF));
       if (isIcon(font)) {
          w *= size / ICON_BASE_SIZE;
+      } else if (isCustomText(font)) {
+         w *= size / TEXT_BASE_SIZE;
       }
       return w;
    }
@@ -204,22 +215,26 @@ public final class LumenText implements QClient {
       int rgb = color & 0xFFFFFF;
       Text t = buildText(font, text, rgb);
       int argb = alpha << 24 | rgb;
+      float scale;
       if (isIcon(font)) {
-         float scale = size / ICON_BASE_SIZE;
-         if (scale <= 0.0F) {
-            return;
-         }
-         var matrices = ctx.getMatrices();
-         matrices.pushMatrix();
-         try {
-            matrices.translate(x, y);
-            matrices.scale(scale, scale);
-            ctx.drawText(tr, t, 0, 0, argb, shadow);
-         } finally {
-            matrices.popMatrix();
-         }
+         scale = size / ICON_BASE_SIZE;
+      } else if (isCustomText(font)) {
+         scale = size / TEXT_BASE_SIZE;
       } else {
          ctx.drawText(tr, t, (int) x, (int) y, argb, shadow);
+         return;
+      }
+      if (scale <= 0.0F) {
+         return;
+      }
+      var matrices = ctx.getMatrices();
+      matrices.pushMatrix();
+      try {
+         matrices.translate(x, y);
+         matrices.scale(scale, scale);
+         ctx.drawText(tr, t, 0, 0, argb, shadow);
+      } finally {
+         matrices.popMatrix();
       }
    }
 }

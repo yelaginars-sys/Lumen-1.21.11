@@ -1,6 +1,5 @@
 package dlc.lumen.mixin;
 
-import com.google.common.base.MoreObjects;
 import dlc.lumen.api.storages.implement.helpertstorages.enumvar.ModuleClass;
 import dlc.lumen.api.utils.render.hands.ShaderHandsRenderer;
 import dlc.lumen.client.modules.impl.combat.Aura;
@@ -8,14 +7,12 @@ import dlc.lumen.client.modules.impl.render.ShaderHands;
 import dlc.lumen.client.modules.impl.render.SwingAnimations;
 import dlc.lumen.client.modules.impl.render.ViewModel;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.item.ItemModelManager;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.VertexConsumerProvider.Immediate;
 import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.item.HeldItemRenderer;
-import net.minecraft.client.render.item.HeldItemRenderer.HandRenderType;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -24,8 +21,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -37,39 +32,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(HeldItemRenderer.class)
 public abstract class HeldItemRendererMixin {
-   @Shadow
-   private ItemStack field_4047;
-   @Shadow
-   private float field_4043;
-   @Shadow
-   private float field_4053;
-   @Shadow
-   private float field_4051;
-   @Shadow
-   private float field_4052;
-    @Shadow
-    private ItemStack field_4048;
-    @Shadow
-    @Final
-    private ItemModelManager itemModelManager;
-   @Unique
+   // 1.21.11: @Overwrite renderItem удалён — руки идут чистым ванильным путём (как у GodWeer).
+   // SwapHands работает через @Redirect ниже, ViewModel/ShaderHands — через @Inject.
+    @Unique
    private int lumen$zenithSlashSide = -1;
    @Unique
    private boolean lumen$zenithSlashReady = true;
-
-   @Shadow
-   protected abstract void method_3228(
-      AbstractClientPlayerEntity var1,
-      float var2,
-      float var3,
-      Hand var4,
-      float var5,
-      ItemStack var6,
-      float var7,
-      MatrixStack var8,
-      OrderedRenderCommandQueue var9,
-      int var10
-   );
 
    @Inject(
       method = "renderItem(FLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/command/OrderedRenderCommandQueue;Lnet/minecraft/client/network/ClientPlayerEntity;I)V",
@@ -360,33 +328,7 @@ public abstract class HeldItemRendererMixin {
       return (float)(Math.pow(2.0, -10.0 * x) * Math.sin((x * 10.0 - 0.75) * c4) + 1.0);
    }
 
-    @Overwrite
-    public void method_22976(float tickDelta, MatrixStack matrices, OrderedRenderCommandQueue queue, ClientPlayerEntity player, int light) {
-       float f = player.getHandSwingProgress(tickDelta);
-       Hand hand = (Hand)MoreObjects.firstNonNull(player.preferredHand, Hand.MAIN_HAND);
-       float g = player.getLerpedPitch(tickDelta);
-       HandRenderType handRenderType = HeldItemRenderer.getHandRenderType(player);
-       float h = MathHelper.lerp(tickDelta, player.lastRenderPitch, player.renderPitch);
-       float i = MathHelper.lerp(tickDelta, player.lastRenderYaw, player.renderYaw);
-       // 1.21.11: ванила доворачивает руки за головой (иначе рука "заморожена" и не следует за взглядом).
-       matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees((player.getPitch(tickDelta) - h) * 0.1F));
-       matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees((player.getYaw(tickDelta) - i) * 0.1F));
-       if (handRenderType.renderMainHand) {
-          float j = hand == Hand.MAIN_HAND ? f : 0.0F;
-          float k = this.itemModelManager.getSwapAnimationScale(this.field_4047)
-             * (1.0F - MathHelper.lerp(tickDelta, this.field_4053, this.field_4043));
-          this.method_3228(player, tickDelta, g, Hand.MAIN_HAND, j, this.field_4047, k, matrices, queue, light);
-       }
-
-       if (handRenderType.renderOffHand) {
-          float j = hand == Hand.OFF_HAND ? f : 0.0F;
-          float k = this.itemModelManager.getSwapAnimationScale(this.field_4048)
-             * (1.0F - MathHelper.lerp(tickDelta, this.field_4051, this.field_4052));
-          this.method_3228(player, tickDelta, g, Hand.OFF_HAND, j, this.field_4048, k, matrices, queue, light);
-       }
-    }
-
-   @Inject(method = "applyEatOrDrinkTransformation", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "applyEatOrDrinkTransformation", at = @At("HEAD"), cancellable = true)
    private void onApplyEatOrDrinkTransformation(MatrixStack matrices, float tickDelta, Arm arm, ItemStack stack, PlayerEntity player, CallbackInfo ci) {
       SwingAnimations tweaks = this.getTweaks();
       if (tweaks != null && tweaks.isEnable() && !tweaks.hmiEnable.isState() && tweaks.eatAnim.isState() && player.isUsingItem()) {
