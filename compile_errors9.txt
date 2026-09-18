@@ -1,0 +1,892 @@
+
+> Configure project :
+Fabric Loom: 1.14.10
+
+> Task :compileJava
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\MacroCommand.java:25: error: cannot find symbol
+                           String var6 = var5.name();
+                                             ^
+  symbol:   method name()
+  location: variable var5 of type Field
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\events\EventInvoker.java:147: error: cannot find symbol
+                     + var5.name()
+                           ^
+  symbol:   method name()
+  location: variable var5 of type Module
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:980: error: method does not override or implement a method from a supertype
+            @Override
+            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:105: error: cannot find symbol
+         ShaderProgram var3 = mc.getShaderLoader().getOrCreateProgram(var2);
+                                                  ^
+  symbol:   method getOrCreateProgram(ShaderProgramKey)
+  location: class ShaderLoader
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:125: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var14 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:243: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(float)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: cannot find symbol
+               this.framebuffer.beginWrite(false);
+                               ^
+  symbol:   method beginWrite(boolean)
+  location: variable framebuffer of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:149: error: cannot find symbol
+               mc.getFramebuffer().beginWrite(false);
+                                  ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:170: error: cannot find symbol
+                  mc.getFramebuffer().beginWrite(false);
+                                     ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:175: error: cannot find symbol
+                  RenderSystem.setShaderTexture(0, this.framebuffer.getColorAttachment());
+                              ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:193: error: cannot find symbol
+                  RenderSystem.setShaderTexture(0, 0);
+                              ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:205: error: cannot find symbol
+         mc.getFramebuffer().beginWrite(false);
+                            ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:210: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.framebuffer.getColorAttachment());
+                     ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:229: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, 0);
+                     ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:236: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(Matrix4f)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:243: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(float)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:250: error: cannot find symbol
+         var5.set(x, y);
+             ^
+  symbol:   method set(float,float)
+  location: variable var5 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:257: error: cannot find symbol
+         var6.set(x, y, z);
+             ^
+  symbol:   method set(float,float,float)
+  location: variable var6 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:404: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var21 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                   ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:565: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var4 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:594: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var3 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:624: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var1 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockESP.java:187: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+         BufferBuilder var5 = var4.begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockESP.java:195: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+         BufferBuilder var9 = var4.begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:155: error: cannot find symbol
+                  mc.getFramebuffer().beginWrite(true);
+                                     ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:159: error: cannot find symbol
+                  RenderSystem.colorMask(true, true, true, true);
+                              ^
+  symbol:   method colorMask(boolean,boolean,boolean,boolean)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:161: error: cannot find symbol
+                  RenderSystem.setShaderTexture(0, this.simpleFramebuffer.getColorAttachment());
+                              ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:162: error: cannot find symbol
+                  RenderSystem.setShaderTexture(1, var4.getColorAttachment());
+                              ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:164: error: incompatible types: GpuTexture cannot be converted to int
+                  this.helper6(var5);
+                               ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:165: error: cannot find symbol
+                  RenderSystem.setShaderTexture(2, var5);
+                              ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:176: error: cannot find symbol
+                  RenderSystem.setShaderTexture(0, 0);
+                              ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:177: error: cannot find symbol
+                  RenderSystem.setShaderTexture(1, 0);
+                              ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:178: error: cannot find symbol
+                  RenderSystem.setShaderTexture(2, 0);
+                              ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:183: error: cannot find symbol
+                  RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                              ^
+  symbol:   method setShaderColor(float,float,float,float)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:184: error: cannot find symbol
+                  mc.getFramebuffer().beginWrite(true);
+                                     ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:211: error: cannot find symbol
+      mc.getFramebuffer().beginWrite(true);
+                         ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:216: error: cannot find symbol
+         RenderSystem.bindTexture(depthTex);
+                     ^
+  symbol:   method bindTexture(int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:220: error: cannot find symbol
+         RenderSystem.bindTexture(0);
+                     ^
+  symbol:   method bindTexture(int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:227: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var3 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:268: error: cannot find symbol
+            var5.beginWrite(false);
+                ^
+  symbol:   method beginWrite(boolean)
+  location: variable var5 of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:271: error: cannot find symbol
+            RenderSystem.depthFunc(515);
+                        ^
+  symbol:   method depthFunc(int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:274: error: cannot find symbol
+            RenderSystem.colorMask(true, true, true, true);
+                        ^
+  symbol:   method colorMask(boolean,boolean,boolean,boolean)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:281: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var6 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE);
+                                                                                                                                                                        ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:292: error: cannot find symbol
+            RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                        ^
+  symbol:   method setShaderColor(float,float,float,float)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:300: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(Matrix4f)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:307: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(float)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:314: error: cannot find symbol
+         var6.set(x, y, z);
+             ^
+  symbol:   method set(float,float,float)
+  location: variable var6 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\FreeCam.java:85: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var18 = var17.begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                               ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:101: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.textureId);
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:118: error: cannot find symbol
+         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                     ^
+  symbol:   method setShaderColor(float,float,float,float)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:160: error: cannot find symbol
+      BufferBuilder var27 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                  ^
+  symbol:   variable com
+  location: class VertexFormat
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:566: error: cannot find symbol
+         ShaderProgram var16 = mc.getShaderLoader().getOrCreateProgram(ShaderUtils.lightning);
+                                                   ^
+  symbol:   method getOrCreateProgram(ShaderProgramKey)
+  location: class ShaderLoader
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:571: error: cannot find symbol
+               var17.set((float)(now % 100000L) / 1000.0F + bolt.flickerSeed);
+                    ^
+  symbol:   method set(float)
+  location: variable var17 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:576: error: cannot find symbol
+               var18.set(reveal);
+                    ^
+  symbol:   method set(float)
+  location: variable var18 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:579: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var19 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:705: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var36 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:725: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var37 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:746: error: cannot find symbol
+            RenderSystem.setShaderTexture(0, this.helper4());
+                        ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:747: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var40 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1053: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var9 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                           ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1134: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var21 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1234: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+               BufferBuilder var22 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1278: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+               BufferBuilder var27 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1293: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+               BufferBuilder var39 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1331: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+               BufferBuilder var22 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1344: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var28 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1379: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var16 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1391: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var22 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1408: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+         BufferBuilder var15 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                      ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1421: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+         BufferBuilder var21 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                      ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1487: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var33 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1506: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+               BufferBuilder var49 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                     ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1523: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+         BufferBuilder var46 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                      ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1619: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+            BufferBuilder var16 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLES, VertexFormats.POSITION_COLOR);
+                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1738: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+         BufferBuilder var17 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                      ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1779: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.helper3());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1817: error: cannot find symbol
+            RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                        ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1829: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var7 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLES, VertexFormats.POSITION_COLOR);
+                                                                                                                           ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1842: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var5 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLES, VertexFormats.POSITION_COLOR);
+                                                                                                                           ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1855: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+      BufferBuilder var5 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1899: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.helper4());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2011: error: cannot find symbol
+               RenderSystem.setShaderTexture(0, this.helper4());
+                           ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2070: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.helper4());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2143: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+         BufferBuilder var14 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLES, VertexFormats.POSITION_COLOR);
+                                                                                                                               ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2188: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.helper4());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2249: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+         BufferBuilder var12 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                      ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:175: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.computeIdentifier());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:188: error: cannot find symbol
+         BufferBuilder var19 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                     ^
+  symbol:   variable com
+  location: class VertexFormat
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:347: error: cannot find symbol
+            if (var5.id() == var3 && var5 != mc.player) {
+                    ^
+  symbol:   method id()
+  location: variable var5 of type PlayerEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:579: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:607: error: cannot find symbol
+         BufferBuilder var13 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                     ^
+  symbol:   variable com
+  location: class VertexFormat
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:704: error: cannot find symbol
+      RenderSystem.setShaderTexture(0, TEXTURE_ID2);
+                  ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:719: error: cannot find symbol
+      BufferBuilder var16 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                  ^
+  symbol:   variable com
+  location: class VertexFormat
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:884: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:955: error: cannot find symbol
+            BufferBuilder var38 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                        ^
+  symbol:   variable com
+  location: class VertexFormat
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:961: error: cannot find symbol
+            BufferBuilder var39 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                        ^
+  symbol:   variable com
+  location: class VertexFormat
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:985: error: cannot find symbol
+                     BufferBuilder var51 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                 ^
+  symbol:   variable com
+  location: class VertexFormat
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:1141: error: cannot find symbol
+      RenderSystem.setShaderTexture(0, TEXTURE_ID3);
+                  ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:1147: error: cannot find symbol
+      BufferBuilder var11 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                  ^
+  symbol:   variable com
+  location: class VertexFormat
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:1154: error: cannot find symbol
+      RenderSystem.setShaderTexture(0, 0);
+                  ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+100 errors
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/yelag/Downloads/Lumen-1.21.11/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  Note: Recompile with -Xlint:deprecation for details.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:164: error: incompatible types: GpuTexture cannot be converted to int
+                    this.helper6(var5);
+                                 ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:160: error: cannot find symbol
+        BufferBuilder var27 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                    ^
+    symbol:   variable com
+    location: class VertexFormat
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:188: error: cannot find symbol
+           BufferBuilder var19 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                       ^
+    symbol:   variable com
+    location: class VertexFormat
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:607: error: cannot find symbol
+           BufferBuilder var13 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                       ^
+    symbol:   variable com
+    location: class VertexFormat
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:719: error: cannot find symbol
+        BufferBuilder var16 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                    ^
+    symbol:   variable com
+    location: class VertexFormat
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:955: error: cannot find symbol
+              BufferBuilder var38 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                          ^
+    symbol:   variable com
+    location: class VertexFormat
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:961: error: cannot find symbol
+              BufferBuilder var39 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                          ^
+    symbol:   variable com
+    location: class VertexFormat
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:985: error: cannot find symbol
+                       BufferBuilder var51 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                   ^
+    symbol:   variable com
+    location: class VertexFormat
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:1147: error: cannot find symbol
+        BufferBuilder var11 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                    ^
+    symbol:   variable com
+    location: class VertexFormat
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:980: error: method does not override or implement a method from a supertype
+              @Override
+              ^
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  Note: Some input files use unchecked or unsafe operations.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:125: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var14 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:404: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var21 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                     ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:565: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var4 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:594: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var3 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:624: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var1 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockESP.java:187: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+           BufferBuilder var5 = var4.begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                  ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockESP.java:195: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+           BufferBuilder var9 = var4.begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                  ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:227: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var3 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:281: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var6 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE);
+                                                                                                                                                                          ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\FreeCam.java:85: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var18 = var17.begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                 ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:579: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var19 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:705: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var36 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:725: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var37 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:747: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var40 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1053: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var9 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                             ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1134: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var21 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1234: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+                 BufferBuilder var22 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                              ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1278: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+                 BufferBuilder var27 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                              ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1293: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+                 BufferBuilder var39 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                              ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1331: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+                 BufferBuilder var22 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                              ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1344: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var28 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1379: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var16 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1391: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var22 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1408: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+           BufferBuilder var15 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                        ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1421: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+           BufferBuilder var21 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                        ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1487: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var33 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1506: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+                 BufferBuilder var49 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                       ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1523: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+           BufferBuilder var46 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                        ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1619: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+              BufferBuilder var16 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLES, VertexFormats.POSITION_COLOR);
+                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1738: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+           BufferBuilder var17 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                        ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1829: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var7 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLES, VertexFormats.POSITION_COLOR);
+                                                                                                                             ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1842: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var5 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLES, VertexFormats.POSITION_COLOR);
+                                                                                                                             ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1855: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+        BufferBuilder var5 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.DEBUG_LINE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                                                                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2143: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat does not exist
+           BufferBuilder var14 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.TRIANGLES, VertexFormats.POSITION_COLOR);
+                                                                                                                                 ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2249: error: package com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat does not exist
+           BufferBuilder var12 = Tessellator.getInstance().begin(com.mojang.blaze3d.vertex.com.mojang.blaze3d.vertex.VertexFormat.com.mojang.blaze3d.vertex.VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                                                                                                        ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\MacroCommand.java:25: error: cannot find symbol
+                             String var6 = var5.name();
+                                               ^
+    symbol:   method name()
+    location: variable var5 of type Field
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\events\EventInvoker.java:147: error: cannot find symbol
+                       + var5.name()
+                             ^
+    symbol:   method name()
+    location: variable var5 of type Module
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:105: error: cannot find symbol
+           ShaderProgram var3 = mc.getShaderLoader().getOrCreateProgram(var2);
+                                                    ^
+    symbol:   method getOrCreateProgram(ShaderProgramKey)
+    location: class ShaderLoader
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:243: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(float)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: cannot find symbol
+                 this.framebuffer.beginWrite(false);
+                                 ^
+    symbol:   method beginWrite(boolean)
+    location: variable framebuffer of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:149: error: cannot find symbol
+                 mc.getFramebuffer().beginWrite(false);
+                                    ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:170: error: cannot find symbol
+                    mc.getFramebuffer().beginWrite(false);
+                                       ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:175: error: cannot find symbol
+                    RenderSystem.setShaderTexture(0, this.framebuffer.getColorAttachment());
+                                ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:193: error: cannot find symbol
+                    RenderSystem.setShaderTexture(0, 0);
+                                ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:205: error: cannot find symbol
+           mc.getFramebuffer().beginWrite(false);
+                              ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:210: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.framebuffer.getColorAttachment());
+                       ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:229: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, 0);
+                       ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:236: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(Matrix4f)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:243: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(float)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:250: error: cannot find symbol
+           var5.set(x, y);
+               ^
+    symbol:   method set(float,float)
+    location: variable var5 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:257: error: cannot find symbol
+           var6.set(x, y, z);
+               ^
+    symbol:   method set(float,float,float)
+    location: variable var6 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:155: error: cannot find symbol
+                    mc.getFramebuffer().beginWrite(true);
+                                       ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:159: error: cannot find symbol
+                    RenderSystem.colorMask(true, true, true, true);
+                                ^
+    symbol:   method colorMask(boolean,boolean,boolean,boolean)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:161: error: cannot find symbol
+                    RenderSystem.setShaderTexture(0, this.simpleFramebuffer.getColorAttachment());
+                                ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:162: error: cannot find symbol
+                    RenderSystem.setShaderTexture(1, var4.getColorAttachment());
+                                ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:165: error: cannot find symbol
+                    RenderSystem.setShaderTexture(2, var5);
+                                ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:176: error: cannot find symbol
+                    RenderSystem.setShaderTexture(0, 0);
+                                ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:177: error: cannot find symbol
+                    RenderSystem.setShaderTexture(1, 0);
+                                ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:178: error: cannot find symbol
+                    RenderSystem.setShaderTexture(2, 0);
+                                ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:183: error: cannot find symbol
+                    RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                                ^
+    symbol:   method setShaderColor(float,float,float,float)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:184: error: cannot find symbol
+                    mc.getFramebuffer().beginWrite(true);
+                                       ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:211: error: cannot find symbol
+        mc.getFramebuffer().beginWrite(true);
+                           ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:216: error: cannot find symbol
+           RenderSystem.bindTexture(depthTex);
+                       ^
+    symbol:   method bindTexture(int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:220: error: cannot find symbol
+           RenderSystem.bindTexture(0);
+                       ^
+    symbol:   method bindTexture(int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:268: error: cannot find symbol
+              var5.beginWrite(false);
+                  ^
+    symbol:   method beginWrite(boolean)
+    location: variable var5 of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:271: error: cannot find symbol
+              RenderSystem.depthFunc(515);
+                          ^
+    symbol:   method depthFunc(int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:274: error: cannot find symbol
+              RenderSystem.colorMask(true, true, true, true);
+                          ^
+    symbol:   method colorMask(boolean,boolean,boolean,boolean)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:292: error: cannot find symbol
+              RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                          ^
+    symbol:   method setShaderColor(float,float,float,float)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:300: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(Matrix4f)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:307: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(float)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:314: error: cannot find symbol
+           var6.set(x, y, z);
+               ^
+    symbol:   method set(float,float,float)
+    location: variable var6 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:101: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.textureId);
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:118: error: cannot find symbol
+           RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                       ^
+    symbol:   method setShaderColor(float,float,float,float)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:566: error: cannot find symbol
+           ShaderProgram var16 = mc.getShaderLoader().getOrCreateProgram(ShaderUtils.lightning);
+                                                     ^
+    symbol:   method getOrCreateProgram(ShaderProgramKey)
+    location: class ShaderLoader
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:571: error: cannot find symbol
+                 var17.set((float)(now % 100000L) / 1000.0F + bolt.flickerSeed);
+                      ^
+    symbol:   method set(float)
+    location: variable var17 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:576: error: cannot find symbol
+                 var18.set(reveal);
+                      ^
+    symbol:   method set(float)
+    location: variable var18 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:746: error: cannot find symbol
+              RenderSystem.setShaderTexture(0, this.helper4());
+                          ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1779: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.helper3());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1817: error: cannot find symbol
+              RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                          ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1899: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.helper4());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2011: error: cannot find symbol
+                 RenderSystem.setShaderTexture(0, this.helper4());
+                             ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2070: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.helper4());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2188: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.helper4());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:175: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.computeIdentifier());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:347: error: cannot find symbol
+              if (var5.id() == var3 && var5 != mc.player) {
+                      ^
+    symbol:   method id()
+    location: variable var5 of type PlayerEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:579: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:704: error: cannot find symbol
+        RenderSystem.setShaderTexture(0, TEXTURE_ID2);
+                    ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:884: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:1141: error: cannot find symbol
+        RenderSystem.setShaderTexture(0, TEXTURE_ID3);
+                    ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:1154: error: cannot find symbol
+        RenderSystem.setShaderTexture(0, 0);
+                    ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  100 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 14s
+1 actionable task: 1 executed

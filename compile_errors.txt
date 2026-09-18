@@ -1,0 +1,666 @@
+
+> Configure project :
+Fabric Loom: 1.14.10
+
+> Task :compileJava
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimAssistant.java:24: error: cannot find symbol
+import net.minecraft.item.SwordItem;
+                         ^
+  symbol:   class SwordItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:72: error: cannot find symbol
+import net.minecraft.item.PickaxeItem;
+                         ^
+  symbol:   class PickaxeItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:75: error: cannot find symbol
+import net.minecraft.item.SwordItem;
+                         ^
+  symbol:   class SwordItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:7: error: cannot find symbol
+import net.minecraft.item.ArmorItem;
+                         ^
+  symbol:   class ArmorItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoCore.java:31: error: cannot find symbol
+import net.minecraft.item.SwordItem;
+                         ^
+  symbol:   class SwordItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:19: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:20: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockESP.java:16: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:20: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\FreeCam.java:12: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:16: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:27: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:20: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:25: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\AncientXray.java:13: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\MineHelper.java:16: error: cannot find symbol
+import net.minecraft.item.PickaxeItem;
+                         ^
+  symbol:   class PickaxeItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\NameTags.java:51: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\NameTags.java:69: error: cannot find symbol
+import net.minecraft.item.ArmorItem;
+                         ^
+  symbol:   class ArmorItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\MineAssistant.java:20: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\fonts\msdf\Font.java:9: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetLightningV2.java:10: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetLightningV2.java:13: error: cannot find symbol
+import net.minecraft.client.render.VertexFormat;
+                                  ^
+  symbol:   class VertexFormat
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\hands\ShaderHandsRenderer.java:19: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\particles\ParticleRenderer.java:9: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\net\minecraft\client\gl\ShaderProgramKey.java:3: error: cannot find symbol
+import net.minecraft.client.render.VertexFormat;
+                                  ^
+  symbol:   class VertexFormat
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\net\minecraft\client\gl\ShaderProgramKey.java:8: error: cannot find symbol
+    private final VertexFormat format;
+                  ^
+  symbol:   class VertexFormat
+  location: class ShaderProgramKey
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\net\minecraft\client\gl\ShaderProgramKey.java:10: error: cannot find symbol
+    public ShaderProgramKey(Identifier id, VertexFormat format) {
+                                           ^
+  symbol:   class VertexFormat
+  location: class ShaderProgramKey
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\net\minecraft\client\gl\ShaderProgramKey.java:19: error: cannot find symbol
+    public VertexFormat getFormat() {
+           ^
+  symbol:   class VertexFormat
+  location: class ShaderProgramKey
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ShaderEspPipeline.java:14: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:54: error: cannot find symbol
+   private int helper2(ArmorItem armor) {
+                       ^
+  symbol:   class ArmorItem
+  location: class AutoArmor
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\bot\BotSessionManager.java:29: error: cannot find symbol
+import net.minecraft.client.session.Session.AccountType;
+                                           ^
+  symbol:   class AccountType
+  location: class Session
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\player\HotbarUtil.java:21: error: cannot find symbol
+import net.minecraft.item.PickaxeItem;
+                         ^
+  symbol:   class PickaxeItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\player\HotbarUtil.java:23: error: cannot find symbol
+import net.minecraft.item.SwordItem;
+                         ^
+  symbol:   class SwordItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\player\InventoryUtils.java:12: error: cannot find symbol
+import net.minecraft.item.ArmorItem;
+                         ^
+  symbol:   class ArmorItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\blur\BlurProgram.java:12: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\chams\ChamsRenderer.java:24: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\fonts\ttf\MCFontRenderer.java:8: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\fonts\ttf\GradientFontRenderer.java:7: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\glow\GlowProgram.java:11: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\RenderUtils.java:22: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\ShaderUtils.java:7: error: cannot find symbol
+import net.minecraft.client.render.VertexFormat;
+                                  ^
+  symbol:   class VertexFormat
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\ShaderUtils.java:62: error: cannot find symbol
+   private static ShaderProgramKey getOutline(String shaderNamePackage, String shaderName, VertexFormat vertexFormat) {
+                                                                                           ^
+  symbol:   class VertexFormat
+  location: class ShaderUtils
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotSession.java:21: error: cannot find symbol
+import net.minecraft.client.session.Session.AccountType;
+                                           ^
+  symbol:   class AccountType
+  location: class Session
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:17: error: cannot find symbol
+import net.minecraft.entity.player.PlayerPosition;
+                                  ^
+  symbol:   class PlayerPosition
+  location: package net.minecraft.entity.player
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:75: error: cannot find symbol
+import net.minecraft.network.packet.s2c.play.ExperienceOrbSpawnS2CPacket;
+                                            ^
+  symbol:   class ExperienceOrbSpawnS2CPacket
+  location: package net.minecraft.network.packet.s2c.play
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:88: error: cannot find symbol
+import net.minecraft.network.packet.s2c.play.OpenHorseScreenS2CPacket;
+                                            ^
+  symbol:   class OpenHorseScreenS2CPacket
+  location: package net.minecraft.network.packet.s2c.play
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:8: error: cannot find symbol
+import net.minecraft.client.gui.screen.DownloadingTerrainScreen;
+                                      ^
+  symbol:   class DownloadingTerrainScreen
+  location: package net.minecraft.client.gui.screen
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:18: error: cannot find symbol
+import net.minecraft.entity.player.PlayerPosition;
+                                  ^
+  symbol:   class PlayerPosition
+  location: package net.minecraft.entity.player
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:374: error: cannot find symbol
+   public void onExperienceOrbSpawn(ExperienceOrbSpawnS2CPacket packet) {
+                                    ^
+  symbol:   class ExperienceOrbSpawnS2CPacket
+  location: class BotPlayNetworkHandler
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:465: error: cannot find symbol
+   public void onOpenHorseScreen(OpenHorseScreenS2CPacket packet) {
+                                 ^
+  symbol:   class OpenHorseScreenS2CPacket
+  location: class BotPlayNetworkHandler
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:29: error: cannot find symbol
+   private static final PlayerPosition PLAYER_POSITION = new PlayerPosition(Vec3d.ZERO, Vec3d.ZERO, 0.0F, 0.0F);
+                        ^
+  symbol:   class PlayerPosition
+  location: class BotVisualWorld
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:42: error: cannot find symbol
+   private PlayerPosition playerPosition = PLAYER_POSITION;
+           ^
+  symbol:   class PlayerPosition
+  location: class BotVisualWorld
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:279: error: cannot find symbol
+   PlayerPosition applyServerPositionLook(PlayerPositionLookS2CPacket packet) {
+   ^
+  symbol:   class PlayerPosition
+  location: class BotVisualWorld
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\world\BotScreenBoards.java:29: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\social\GlobalProfileAvatar.java:18: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\ui\mainmenu\account\AccountManager.java:13: error: cannot find symbol
+import net.minecraft.client.session.Session.AccountType;
+                                           ^
+  symbol:   class AccountType
+  location: class Session
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\ui\mainmenu\account\AccountGuiScreen.java:30: error: cannot find symbol
+import net.minecraft.client.session.Session.AccountType;
+                                           ^
+  symbol:   class AccountType
+  location: class Session
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\ui\mainmenu\LumenMenuScreen.java:36: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\ui\mainmenu\MenuBackground.java:11: error: cannot find symbol
+import net.minecraft.client.render.BufferRenderer;
+                                  ^
+  symbol:   class BufferRenderer
+  location: package net.minecraft.client.render
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\Lumen.java:43: error: cannot find symbol
+import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
+                                                  ^
+  symbol:   class WorldRenderEvents
+  location: package net.fabricmc.fabric.api.client.rendering.v1
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\Lumen.java:44: error: package net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents does not exist
+import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents.Start;
+                                                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\mixin\HeldItemRendererMixin.java:20: error: cannot find symbol
+import net.minecraft.item.SwordItem;
+                         ^
+  symbol:   class SwordItem
+  location: package net.minecraft.item
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\mixin\WorldRendererChunkAnimatorMixin.java:7: error: cannot find symbol
+import net.minecraft.client.gl.VertexBuffer;
+                              ^
+  symbol:   class VertexBuffer
+  location: package net.minecraft.client.gl
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\mixin\WorldRendererChunkAnimatorMixin.java:46: error: cannot find symbol
+      VertexBuffer buffer
+      ^
+  symbol:   class VertexBuffer
+  location: class WorldRendererChunkAnimatorMixin
+64 errors
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/yelag/Downloads/Lumen-1.21.11/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimAssistant.java:24: error: cannot find symbol
+  import net.minecraft.item.SwordItem;
+                           ^
+    symbol:   class SwordItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:72: error: cannot find symbol
+  import net.minecraft.item.PickaxeItem;
+                           ^
+    symbol:   class PickaxeItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:75: error: cannot find symbol
+  import net.minecraft.item.SwordItem;
+                           ^
+    symbol:   class SwordItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:7: error: cannot find symbol
+  import net.minecraft.item.ArmorItem;
+                           ^
+    symbol:   class ArmorItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoCore.java:31: error: cannot find symbol
+  import net.minecraft.item.SwordItem;
+                           ^
+    symbol:   class SwordItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:19: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:20: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockESP.java:16: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:20: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\FreeCam.java:12: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:16: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:27: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:20: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:25: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\AncientXray.java:13: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\MineHelper.java:16: error: cannot find symbol
+  import net.minecraft.item.PickaxeItem;
+                           ^
+    symbol:   class PickaxeItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\NameTags.java:51: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\NameTags.java:69: error: cannot find symbol
+  import net.minecraft.item.ArmorItem;
+                           ^
+    symbol:   class ArmorItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\MineAssistant.java:20: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\fonts\msdf\Font.java:9: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetLightningV2.java:10: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetLightningV2.java:13: error: cannot find symbol
+  import net.minecraft.client.render.VertexFormat;
+                                    ^
+    symbol:   class VertexFormat
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\hands\ShaderHandsRenderer.java:19: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\particles\ParticleRenderer.java:9: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\net\minecraft\client\gl\ShaderProgramKey.java:3: error: cannot find symbol
+  import net.minecraft.client.render.VertexFormat;
+                                    ^
+    symbol:   class VertexFormat
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\net\minecraft\client\gl\ShaderProgramKey.java:8: error: cannot find symbol
+      private final VertexFormat format;
+                    ^
+    symbol:   class VertexFormat
+    location: class ShaderProgramKey
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\net\minecraft\client\gl\ShaderProgramKey.java:10: error: cannot find symbol
+      public ShaderProgramKey(Identifier id, VertexFormat format) {
+                                             ^
+    symbol:   class VertexFormat
+    location: class ShaderProgramKey
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\net\minecraft\client\gl\ShaderProgramKey.java:19: error: cannot find symbol
+      public VertexFormat getFormat() {
+             ^
+    symbol:   class VertexFormat
+    location: class ShaderProgramKey
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ShaderEspPipeline.java:14: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:54: error: cannot find symbol
+     private int helper2(ArmorItem armor) {
+                         ^
+    symbol:   class ArmorItem
+    location: class AutoArmor
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\bot\BotSessionManager.java:29: error: cannot find symbol
+  import net.minecraft.client.session.Session.AccountType;
+                                             ^
+    symbol:   class AccountType
+    location: class Session
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\player\HotbarUtil.java:21: error: cannot find symbol
+  import net.minecraft.item.PickaxeItem;
+                           ^
+    symbol:   class PickaxeItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\player\HotbarUtil.java:23: error: cannot find symbol
+  import net.minecraft.item.SwordItem;
+                           ^
+    symbol:   class SwordItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\player\InventoryUtils.java:12: error: cannot find symbol
+  import net.minecraft.item.ArmorItem;
+                           ^
+    symbol:   class ArmorItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\blur\BlurProgram.java:12: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\chams\ChamsRenderer.java:24: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\fonts\ttf\MCFontRenderer.java:8: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\fonts\ttf\GradientFontRenderer.java:7: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\glow\GlowProgram.java:11: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\RenderUtils.java:22: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\ShaderUtils.java:7: error: cannot find symbol
+  import net.minecraft.client.render.VertexFormat;
+                                    ^
+    symbol:   class VertexFormat
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\ShaderUtils.java:62: error: cannot find symbol
+     private static ShaderProgramKey getOutline(String shaderNamePackage, String shaderName, VertexFormat vertexFormat) {
+                                                                                             ^
+    symbol:   class VertexFormat
+    location: class ShaderUtils
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotSession.java:21: error: cannot find symbol
+  import net.minecraft.client.session.Session.AccountType;
+                                             ^
+    symbol:   class AccountType
+    location: class Session
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:17: error: cannot find symbol
+  import net.minecraft.entity.player.PlayerPosition;
+                                    ^
+    symbol:   class PlayerPosition
+    location: package net.minecraft.entity.player
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:75: error: cannot find symbol
+  import net.minecraft.network.packet.s2c.play.ExperienceOrbSpawnS2CPacket;
+                                              ^
+    symbol:   class ExperienceOrbSpawnS2CPacket
+    location: package net.minecraft.network.packet.s2c.play
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:88: error: cannot find symbol
+  import net.minecraft.network.packet.s2c.play.OpenHorseScreenS2CPacket;
+                                              ^
+    symbol:   class OpenHorseScreenS2CPacket
+    location: package net.minecraft.network.packet.s2c.play
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:8: error: cannot find symbol
+  import net.minecraft.client.gui.screen.DownloadingTerrainScreen;
+                                        ^
+    symbol:   class DownloadingTerrainScreen
+    location: package net.minecraft.client.gui.screen
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:18: error: cannot find symbol
+  import net.minecraft.entity.player.PlayerPosition;
+                                    ^
+    symbol:   class PlayerPosition
+    location: package net.minecraft.entity.player
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:374: error: cannot find symbol
+     public void onExperienceOrbSpawn(ExperienceOrbSpawnS2CPacket packet) {
+                                      ^
+    symbol:   class ExperienceOrbSpawnS2CPacket
+    location: class BotPlayNetworkHandler
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotPlayNetworkHandler.java:465: error: cannot find symbol
+     public void onOpenHorseScreen(OpenHorseScreenS2CPacket packet) {
+                                   ^
+    symbol:   class OpenHorseScreenS2CPacket
+    location: class BotPlayNetworkHandler
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:29: error: cannot find symbol
+     private static final PlayerPosition PLAYER_POSITION = new PlayerPosition(Vec3d.ZERO, Vec3d.ZERO, 0.0F, 0.0F);
+                          ^
+    symbol:   class PlayerPosition
+    location: class BotVisualWorld
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:42: error: cannot find symbol
+     private PlayerPosition playerPosition = PLAYER_POSITION;
+             ^
+    symbol:   class PlayerPosition
+    location: class BotVisualWorld
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\core\BotVisualWorld.java:279: error: cannot find symbol
+     PlayerPosition applyServerPositionLook(PlayerPositionLookS2CPacket packet) {
+     ^
+    symbol:   class PlayerPosition
+    location: class BotVisualWorld
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\bots\world\BotScreenBoards.java:29: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\social\GlobalProfileAvatar.java:18: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\ui\mainmenu\account\AccountManager.java:13: error: cannot find symbol
+  import net.minecraft.client.session.Session.AccountType;
+                                             ^
+    symbol:   class AccountType
+    location: class Session
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\ui\mainmenu\account\AccountGuiScreen.java:30: error: cannot find symbol
+  import net.minecraft.client.session.Session.AccountType;
+                                             ^
+    symbol:   class AccountType
+    location: class Session
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\ui\mainmenu\LumenMenuScreen.java:36: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\ui\mainmenu\MenuBackground.java:11: error: cannot find symbol
+  import net.minecraft.client.render.BufferRenderer;
+                                    ^
+    symbol:   class BufferRenderer
+    location: package net.minecraft.client.render
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\Lumen.java:43: error: cannot find symbol
+  import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
+                                                    ^
+    symbol:   class WorldRenderEvents
+    location: package net.fabricmc.fabric.api.client.rendering.v1
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\mixin\HeldItemRendererMixin.java:20: error: cannot find symbol
+  import net.minecraft.item.SwordItem;
+                           ^
+    symbol:   class SwordItem
+    location: package net.minecraft.item
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\mixin\WorldRendererChunkAnimatorMixin.java:7: error: cannot find symbol
+  import net.minecraft.client.gl.VertexBuffer;
+                                ^
+    symbol:   class VertexBuffer
+    location: package net.minecraft.client.gl
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\mixin\WorldRendererChunkAnimatorMixin.java:46: error: cannot find symbol
+        VertexBuffer buffer
+        ^
+    symbol:   class VertexBuffer
+    location: class WorldRendererChunkAnimatorMixin
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\Lumen.java:44: error: package net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents does not exist
+  import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents.Start;
+                                                                      ^
+  64 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 12s
+1 actionable task: 1 executed

@@ -1,0 +1,982 @@
+
+> Configure project :
+Fabric Loom: 1.14.10
+
+> Task :compileJava
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:1099: error: cannot find symbol
+      for (ItemStack var3 : player.getArmorStacks()) {
+                                  ^
+  symbol:   method getArmorStacks()
+  location: variable player of type PlayerEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:1122: error: cannot find symbol
+            Vec3d var5 = this.target2.getPos().add(0.0, this.target2.getHeight() / 2.0, 0.0);
+                                     ^
+  symbol:   method getPos()
+  location: variable target2 of type LivingEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoTotem.java:495: error: cannot find symbol
+      Vec3d var2 = trident.getPos().subtract(mc.player.getEyePos());
+                          ^
+  symbol:   method getPos()
+  location: variable trident of type TridentEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:980: error: method does not override or implement a method from a supertype
+            @Override
+            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:105: error: cannot find symbol
+         ShaderProgram var3 = mc.getShaderLoader().getOrCreateProgram(var2);
+                                                  ^
+  symbol:   method getOrCreateProgram(ShaderProgramKey)
+  location: class ShaderLoader
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:243: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(float)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: cannot find symbol
+               this.framebuffer.beginWrite(false);
+                               ^
+  symbol:   method beginWrite(boolean)
+  location: variable framebuffer of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:149: error: cannot find symbol
+               mc.getFramebuffer().beginWrite(false);
+                                  ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:170: error: cannot find symbol
+                  mc.getFramebuffer().beginWrite(false);
+                                     ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:175: error: cannot find symbol
+                  RenderSystem.setShaderTexture(0, this.framebuffer.getColorAttachment());
+                              ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:193: error: cannot find symbol
+                  RenderSystem.setShaderTexture(0, 0);
+                              ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:205: error: cannot find symbol
+         mc.getFramebuffer().beginWrite(false);
+                            ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:210: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.framebuffer.getColorAttachment());
+                     ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:229: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, 0);
+                     ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:236: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(Matrix4f)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:243: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(float)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:250: error: cannot find symbol
+         var5.set(x, y);
+             ^
+  symbol:   method set(float,float)
+  location: variable var5 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:257: error: cannot find symbol
+         var6.set(x, y, z);
+             ^
+  symbol:   method set(float,float,float)
+  location: variable var6 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:155: error: cannot find symbol
+                  mc.getFramebuffer().beginWrite(true);
+                                     ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:159: error: cannot find symbol
+                  RenderSystem.colorMask(true, true, true, true);
+                              ^
+  symbol:   method colorMask(boolean,boolean,boolean,boolean)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:161: error: cannot find symbol
+                  RenderSystem.setShaderTexture(0, this.simpleFramebuffer.getColorAttachment());
+                              ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:162: error: cannot find symbol
+                  RenderSystem.setShaderTexture(1, var4.getColorAttachment());
+                              ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:164: error: incompatible types: GpuTexture cannot be converted to int
+                  this.helper6(var5);
+                               ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:165: error: cannot find symbol
+                  RenderSystem.setShaderTexture(2, var5);
+                              ^
+  symbol:   method setShaderTexture(int,GpuTexture)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:176: error: cannot find symbol
+                  RenderSystem.setShaderTexture(0, 0);
+                              ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:177: error: cannot find symbol
+                  RenderSystem.setShaderTexture(1, 0);
+                              ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:178: error: cannot find symbol
+                  RenderSystem.setShaderTexture(2, 0);
+                              ^
+  symbol:   method setShaderTexture(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:183: error: cannot find symbol
+                  RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                              ^
+  symbol:   method setShaderColor(float,float,float,float)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:184: error: cannot find symbol
+                  mc.getFramebuffer().beginWrite(true);
+                                     ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:211: error: cannot find symbol
+      mc.getFramebuffer().beginWrite(true);
+                         ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:216: error: cannot find symbol
+         RenderSystem.bindTexture(depthTex);
+                     ^
+  symbol:   method bindTexture(int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:220: error: cannot find symbol
+         RenderSystem.bindTexture(0);
+                     ^
+  symbol:   method bindTexture(int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:268: error: cannot find symbol
+            var5.beginWrite(false);
+                ^
+  symbol:   method beginWrite(boolean)
+  location: variable var5 of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:271: error: cannot find symbol
+            RenderSystem.depthFunc(515);
+                        ^
+  symbol:   method depthFunc(int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:274: error: cannot find symbol
+            RenderSystem.colorMask(true, true, true, true);
+                        ^
+  symbol:   method colorMask(boolean,boolean,boolean,boolean)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:292: error: cannot find symbol
+            RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                        ^
+  symbol:   method setShaderColor(float,float,float,float)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:300: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(Matrix4f)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:307: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(float)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:314: error: cannot find symbol
+         var6.set(x, y, z);
+             ^
+  symbol:   method set(float,float,float)
+  location: variable var6 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:477: error: cannot find symbol
+         var16.push();
+              ^
+  symbol:   method push()
+  location: variable var16 of type Matrix3x2fStack
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:484: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+         InterfaceProcessing.drawHudBg(var16, var11 + 3.0F, var12 + 3.0F, var9 - 6.0F, var10 - 6.0F);
+                                       ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:486: error: cannot find symbol
+            var16.pop();
+                 ^
+  symbol:   method pop()
+  location: variable var16 of type Matrix3x2fStack
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:499: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                  .drawStringWithFade(var16, "Партиклы с головы", var11 + 4.7F, var12 + 7.5F, var9 - 28.0F, ColorUtils.rgba(255, 255, 255, var15));
+                                      ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:508: error: no suitable method found for drawGradientRect(Matrix3x2fStack,float,float,float,float,float,int,int)
+               RenderUtils.drawGradientRect(
+                          ^
+    method RenderUtils.drawGradientRect(MatrixStack,float,float,float,float,Vector4f,int,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+    method RenderUtils.drawGradientRect(MatrixStack,float,float,float,float,float,int,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:519: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+               RenderUtils.drawRoundCircle(var16, var33 + 0.5F, var32 + 4.5F, 6.85F, ColorUtils.rgba(255, 255, 255, var15));
+                                           ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:521: error: no suitable method found for draw(Matrix3x2fStack,String,float,float,int)
+                  .draw(var16, "Вид полоски", var11 + 4.7F, var12 + 18.0F, ColorUtils.rgba(255, 255, 255, this.resolveInt2(var14, 225, 2)));
+                  ^
+    method Font.draw(MatrixStack,String,double,double,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+    method Font.draw(MatrixStack,String,float,float,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:526: error: no suitable method found for drawRoundedRect(Matrix3x2fStack,float,float,float,float,float,int)
+               RenderUtils.drawRoundedRect(var16, var22, var34, var20, var21, 1.5F, var24);
+                          ^
+    method RenderUtils.drawRoundedRect(MatrixStack,float,float,float,float,float,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+    method RenderUtils.drawRoundedRect(MatrixStack,float,float,float,float,Vector4f,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:527: error: no suitable method found for drawRoundedRect(Matrix3x2fStack,float,float,float,float,float,int)
+               RenderUtils.drawRoundedRect(var16, var23, var34, var20, var21, 1.5F, var24);
+                          ^
+    method RenderUtils.drawRoundedRect(MatrixStack,float,float,float,float,float,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+    method RenderUtils.drawRoundedRect(MatrixStack,float,float,float,float,Vector4f,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:529: error: no suitable method found for drawGradientRect(Matrix3x2fStack,float,float,float,float,float,int,int,boolean)
+               RenderUtils.drawGradientRect(var16, var37, var34, var20, var21, 1.5F, var25, var26, true);
+                          ^
+    method RenderUtils.drawGradientRect(MatrixStack,float,float,float,float,float,int,int,boolean) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+    method RenderUtils.drawGradientRect(MatrixStack,float,float,float,float,Vector4f,int,int,boolean) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:536: error: no suitable method found for draw(Matrix3x2fStack,String,float,float,int)
+               this.helper(12).draw(var16, var38, var40, var34 + 3.8F, ColorUtils.rgba(255, 255, 255, var42));
+                              ^
+    method Font.draw(MatrixStack,String,double,double,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+    method Font.draw(MatrixStack,String,float,float,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:537: error: no suitable method found for draw(Matrix3x2fStack,String,float,float,int)
+               this.helper(12).draw(var16, var39, var41, var34 + 3.8F, ColorUtils.rgba(255, 255, 255, var43));
+                              ^
+    method Font.draw(MatrixStack,String,double,double,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+    method Font.draw(MatrixStack,String,float,float,int) is not applicable
+      (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:540: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                  var16,
+                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:552: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+               this.helper19(var16, "Размер", this.helper16(), this.floatSetting, var13, var14, var15);
+                             ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:554: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+               this.helper19(var16, "Размер", this.helper18(), this.scoreBoardScale, var13, var14, var15);
+                             ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:566: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                     var16,
+                     ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:584: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                  var16, "Шлем", var51, var47, var49, this.armorHUD2.isShowHelmet(), this.animationUtils13, this.animationUtils14, var13, var14, var15
+                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:587: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                  var16,
+                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:600: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                  var16,
+                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:613: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                  var16,
+                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:626: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                  var16,
+                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:640: error: cannot find symbol
+            var16.pop();
+                 ^
+  symbol:   method pop()
+  location: variable var16 of type Matrix3x2fStack
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:101: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.textureId);
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:118: error: cannot find symbol
+         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                     ^
+  symbol:   method setShaderColor(float,float,float,float)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:160: error: package VertexFormat does not exist
+      BufferBuilder var27 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                        ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\Velocity.java:61: error: cannot find symbol
+                           mc.player.setVelocityClient(new Vec3d(var7, var9, var11));
+                                                           ^
+  symbol:   class Vec3d
+  location: class Velocity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\FakePlayer.java:56: error: cannot find symbol
+            mc.player.resetLastAttackedTicks();
+                     ^
+  symbol:   method resetLastAttackedTicks()
+  location: variable player of type ClientPlayerEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:566: error: cannot find symbol
+         ShaderProgram var16 = mc.getShaderLoader().getOrCreateProgram(ShaderUtils.lightning);
+                                                   ^
+  symbol:   method getOrCreateProgram(ShaderProgramKey)
+  location: class ShaderLoader
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:571: error: cannot find symbol
+               var17.set((float)(now % 100000L) / 1000.0F + bolt.flickerSeed);
+                    ^
+  symbol:   method set(float)
+  location: variable var17 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:576: error: cannot find symbol
+               var18.set(reveal);
+                    ^
+  symbol:   method set(float)
+  location: variable var18 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:746: error: cannot find symbol
+            RenderSystem.setShaderTexture(0, this.helper4());
+                        ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1601: error: cannot find symbol
+            Vec3d var31 = var30.getEntityPos();
+                               ^
+  symbol:   method getEntityPos()
+  location: variable var30 of type Camera
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1665: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+         this.helper51(event.getContext().getMatrices(), var2);
+                                                     ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1779: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.helper3());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1817: error: cannot find symbol
+            RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                        ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1899: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.helper4());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2011: error: cannot find symbol
+               RenderSystem.setShaderTexture(0, this.helper4());
+                           ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2070: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.helper4());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2188: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.helper4());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\TargetPearl.java:210: error: cannot find symbol
+      Vec3d var3 = pearl.getPos();
+                        ^
+  symbol:   method getPos()
+  location: variable pearl of type EnderPearlEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\TargetPearl.java:217: error: cannot find symbol
+      Vec3d var2 = pearl.getPos();
+                        ^
+  symbol:   method getPos()
+  location: variable pearl of type EnderPearlEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:108: error: cannot find symbol
+         for (ItemStack var5 : var3.getArmorItems()) {
+                                   ^
+  symbol:   method getArmorItems()
+  location: variable var3 of type PlayerEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:175: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, this.computeIdentifier());
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:188: error: package VertexFormat does not exist
+         BufferBuilder var19 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                           ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\TriggerBot.java:136: error: cannot find symbol
+      return player.getInventory().armor.stream().allMatch(stack -> stack.isEmpty() || stack.isOf(Items.ELYTRA));
+                                  ^
+  symbol:   variable armor
+  location: class PlayerInventory
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\NoSlow.java:49: error: cannot find symbol
+                        && mc.player.input.movementForward > 0.0F
+                                          ^
+  symbol:   variable movementForward
+  location: variable input of type Input
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\NoSlow.java:63: error: cannot find symbol
+                        && mc.player.input.movementForward > 0.0F
+                                          ^
+  symbol:   variable movementForward
+  location: variable input of type Input
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\ServerHelper.java:288: error: method addParticle in class ClientWorld cannot be applied to given types;
+                  mc.world.addParticle(ParticleTypes.SNOWFLAKE, true, true, var14, var18, var16, 0.0, -0.05, 0.0);
+                          ^
+  required: ParticleEffect,boolean,boolean,double,double,double,double,double,double
+  found:    SimpleParticleType,boolean,boolean,double,double,double,double,double,double
+  reason: addParticle(ParticleEffect,boolean,boolean,double,double,double,double,double,double) has private access in ClientWorld
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:527: error: package VertexFormat does not exist
+      BufferBuilder var9 = Tessellator.getInstance().begin(VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                       ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:550: error: cannot find symbol
+      BufferBuilder var10 = Tessellator.getInstance().begin(DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                            ^
+  symbol:   variable DrawMode
+  location: class Trajectories
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:579: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:607: error: package VertexFormat does not exist
+         BufferBuilder var13 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                           ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:704: error: cannot find symbol
+      RenderSystem.setShaderTexture(0, TEXTURE_ID2);
+                  ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:719: error: package VertexFormat does not exist
+      BufferBuilder var16 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                        ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:797: error: cannot find symbol
+      BufferBuilder var7 = Tessellator.getInstance().begin(DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                           ^
+  symbol:   variable DrawMode
+  location: class Trajectories
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:884: error: cannot find symbol
+         RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                     ^
+  symbol:   method setShaderTexture(int,Identifier)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:915: error: cannot find symbol
+            MathHelper.lerp(tickDelta, pearl.prevX, pearl.getX()),
+                                            ^
+  symbol:   variable prevX
+  location: variable pearl of type EnderPearlEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:916: error: cannot find symbol
+            MathHelper.lerp(tickDelta, pearl.prevY, pearl.getY()),
+                                            ^
+  symbol:   variable prevY
+  location: variable pearl of type EnderPearlEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:917: error: cannot find symbol
+            MathHelper.lerp(tickDelta, pearl.prevZ, pearl.getZ())
+                                            ^
+  symbol:   variable prevZ
+  location: variable pearl of type EnderPearlEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:955: error: package VertexFormat does not exist
+            BufferBuilder var38 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                              ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:961: error: package VertexFormat does not exist
+            BufferBuilder var39 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                              ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+100 errors
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/yelag/Downloads/Lumen-1.21.11/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\ServerHelper.java:288: error: method addParticle in class ClientWorld cannot be applied to given types;
+                    mc.world.addParticle(ParticleTypes.SNOWFLAKE, true, true, var14, var18, var16, 0.0, -0.05, 0.0);
+                            ^
+    required: ParticleEffect,boolean,boolean,double,double,double,double,double,double
+    found:    SimpleParticleType,boolean,boolean,double,double,double,double,double,double
+    reason: addParticle(ParticleEffect,boolean,boolean,double,double,double,double,double,double) has private access in ClientWorld
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:508: error: no suitable method found for drawGradientRect(Matrix3x2fStack,float,float,float,float,float,int,int)
+                 RenderUtils.drawGradientRect(
+                            ^
+      method RenderUtils.drawGradientRect(MatrixStack,float,float,float,float,Vector4f,int,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+      method RenderUtils.drawGradientRect(MatrixStack,float,float,float,float,float,int,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:521: error: no suitable method found for draw(Matrix3x2fStack,String,float,float,int)
+                    .draw(var16, "Вид полоски", var11 + 4.7F, var12 + 18.0F, ColorUtils.rgba(255, 255, 255, this.resolveInt2(var14, 225, 2)));
+                    ^
+      method Font.draw(MatrixStack,String,double,double,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+      method Font.draw(MatrixStack,String,float,float,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:526: error: no suitable method found for drawRoundedRect(Matrix3x2fStack,float,float,float,float,float,int)
+                 RenderUtils.drawRoundedRect(var16, var22, var34, var20, var21, 1.5F, var24);
+                            ^
+      method RenderUtils.drawRoundedRect(MatrixStack,float,float,float,float,float,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+      method RenderUtils.drawRoundedRect(MatrixStack,float,float,float,float,Vector4f,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:527: error: no suitable method found for drawRoundedRect(Matrix3x2fStack,float,float,float,float,float,int)
+                 RenderUtils.drawRoundedRect(var16, var23, var34, var20, var21, 1.5F, var24);
+                            ^
+      method RenderUtils.drawRoundedRect(MatrixStack,float,float,float,float,float,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+      method RenderUtils.drawRoundedRect(MatrixStack,float,float,float,float,Vector4f,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:529: error: no suitable method found for drawGradientRect(Matrix3x2fStack,float,float,float,float,float,int,int,boolean)
+                 RenderUtils.drawGradientRect(var16, var37, var34, var20, var21, 1.5F, var25, var26, true);
+                            ^
+      method RenderUtils.drawGradientRect(MatrixStack,float,float,float,float,float,int,int,boolean) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+      method RenderUtils.drawGradientRect(MatrixStack,float,float,float,float,Vector4f,int,int,boolean) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:536: error: no suitable method found for draw(Matrix3x2fStack,String,float,float,int)
+                 this.helper(12).draw(var16, var38, var40, var34 + 3.8F, ColorUtils.rgba(255, 255, 255, var42));
+                                ^
+      method Font.draw(MatrixStack,String,double,double,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+      method Font.draw(MatrixStack,String,float,float,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:537: error: no suitable method found for draw(Matrix3x2fStack,String,float,float,int)
+                 this.helper(12).draw(var16, var39, var41, var34 + 3.8F, ColorUtils.rgba(255, 255, 255, var43));
+                                ^
+      method Font.draw(MatrixStack,String,double,double,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+      method Font.draw(MatrixStack,String,float,float,int) is not applicable
+        (argument mismatch; Matrix3x2fStack cannot be converted to MatrixStack)
+  Note: Recompile with -Xlint:deprecation for details.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:164: error: incompatible types: GpuTexture cannot be converted to int
+                    this.helper6(var5);
+                                 ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:484: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+           InterfaceProcessing.drawHudBg(var16, var11 + 3.0F, var12 + 3.0F, var9 - 6.0F, var10 - 6.0F);
+                                         ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:499: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                    .drawStringWithFade(var16, "Партиклы с головы", var11 + 4.7F, var12 + 7.5F, var9 - 28.0F, ColorUtils.rgba(255, 255, 255, var15));
+                                        ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:519: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                 RenderUtils.drawRoundCircle(var16, var33 + 0.5F, var32 + 4.5F, 6.85F, ColorUtils.rgba(255, 255, 255, var15));
+                                             ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:540: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                    var16,
+                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:552: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                 this.helper19(var16, "Размер", this.helper16(), this.floatSetting, var13, var14, var15);
+                               ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:554: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                 this.helper19(var16, "Размер", this.helper18(), this.scoreBoardScale, var13, var14, var15);
+                               ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:566: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                       var16,
+                       ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:584: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                    var16, "Шлем", var51, var47, var49, this.armorHUD2.isShowHelmet(), this.animationUtils13, this.animationUtils14, var13, var14, var15
+                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:587: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                    var16,
+                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:600: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                    var16,
+                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:613: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                    var16,
+                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:626: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+                    var16,
+                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1665: error: incompatible types: Matrix3x2fStack cannot be converted to MatrixStack
+           this.helper51(event.getContext().getMatrices(), var2);
+                                                       ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\Velocity.java:61: error: cannot find symbol
+                             mc.player.setVelocityClient(new Vec3d(var7, var9, var11));
+                                                             ^
+    symbol:   class Vec3d
+    location: class Velocity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\TriggerBot.java:136: error: cannot find symbol
+        return player.getInventory().armor.stream().allMatch(stack -> stack.isEmpty() || stack.isOf(Items.ELYTRA));
+                                    ^
+    symbol:   variable armor
+    location: class PlayerInventory
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\NoSlow.java:49: error: cannot find symbol
+                          && mc.player.input.movementForward > 0.0F
+                                            ^
+    symbol:   variable movementForward
+    location: variable input of type Input
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\movement\NoSlow.java:63: error: cannot find symbol
+                          && mc.player.input.movementForward > 0.0F
+                                            ^
+    symbol:   variable movementForward
+    location: variable input of type Input
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:550: error: cannot find symbol
+        BufferBuilder var10 = Tessellator.getInstance().begin(DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                              ^
+    symbol:   variable DrawMode
+    location: class Trajectories
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:797: error: cannot find symbol
+        BufferBuilder var7 = Tessellator.getInstance().begin(DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
+                                                             ^
+    symbol:   variable DrawMode
+    location: class Trajectories
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:915: error: cannot find symbol
+              MathHelper.lerp(tickDelta, pearl.prevX, pearl.getX()),
+                                              ^
+    symbol:   variable prevX
+    location: variable pearl of type EnderPearlEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:916: error: cannot find symbol
+              MathHelper.lerp(tickDelta, pearl.prevY, pearl.getY()),
+                                              ^
+    symbol:   variable prevY
+    location: variable pearl of type EnderPearlEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:917: error: cannot find symbol
+              MathHelper.lerp(tickDelta, pearl.prevZ, pearl.getZ())
+                                              ^
+    symbol:   variable prevZ
+    location: variable pearl of type EnderPearlEntity
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:980: error: method does not override or implement a method from a supertype
+              @Override
+              ^
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  Note: Some input files use unchecked or unsafe operations.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:160: error: package VertexFormat does not exist
+        BufferBuilder var27 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                          ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:188: error: package VertexFormat does not exist
+           BufferBuilder var19 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                             ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:527: error: package VertexFormat does not exist
+        BufferBuilder var9 = Tessellator.getInstance().begin(VertexFormat.DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
+                                                                         ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:607: error: package VertexFormat does not exist
+           BufferBuilder var13 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                             ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:719: error: package VertexFormat does not exist
+        BufferBuilder var16 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                          ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:955: error: package VertexFormat does not exist
+              BufferBuilder var38 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:961: error: package VertexFormat does not exist
+              BufferBuilder var39 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:1099: error: cannot find symbol
+        for (ItemStack var3 : player.getArmorStacks()) {
+                                    ^
+    symbol:   method getArmorStacks()
+    location: variable player of type PlayerEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:1122: error: cannot find symbol
+              Vec3d var5 = this.target2.getPos().add(0.0, this.target2.getHeight() / 2.0, 0.0);
+                                       ^
+    symbol:   method getPos()
+    location: variable target2 of type LivingEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoTotem.java:495: error: cannot find symbol
+        Vec3d var2 = trident.getPos().subtract(mc.player.getEyePos());
+                            ^
+    symbol:   method getPos()
+    location: variable trident of type TridentEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:105: error: cannot find symbol
+           ShaderProgram var3 = mc.getShaderLoader().getOrCreateProgram(var2);
+                                                    ^
+    symbol:   method getOrCreateProgram(ShaderProgramKey)
+    location: class ShaderLoader
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:243: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(float)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: cannot find symbol
+                 this.framebuffer.beginWrite(false);
+                                 ^
+    symbol:   method beginWrite(boolean)
+    location: variable framebuffer of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:149: error: cannot find symbol
+                 mc.getFramebuffer().beginWrite(false);
+                                    ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:170: error: cannot find symbol
+                    mc.getFramebuffer().beginWrite(false);
+                                       ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:175: error: cannot find symbol
+                    RenderSystem.setShaderTexture(0, this.framebuffer.getColorAttachment());
+                                ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:193: error: cannot find symbol
+                    RenderSystem.setShaderTexture(0, 0);
+                                ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:205: error: cannot find symbol
+           mc.getFramebuffer().beginWrite(false);
+                              ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:210: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.framebuffer.getColorAttachment());
+                       ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:229: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, 0);
+                       ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:236: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(Matrix4f)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:243: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(float)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:250: error: cannot find symbol
+           var5.set(x, y);
+               ^
+    symbol:   method set(float,float)
+    location: variable var5 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:257: error: cannot find symbol
+           var6.set(x, y, z);
+               ^
+    symbol:   method set(float,float,float)
+    location: variable var6 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:155: error: cannot find symbol
+                    mc.getFramebuffer().beginWrite(true);
+                                       ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:159: error: cannot find symbol
+                    RenderSystem.colorMask(true, true, true, true);
+                                ^
+    symbol:   method colorMask(boolean,boolean,boolean,boolean)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:161: error: cannot find symbol
+                    RenderSystem.setShaderTexture(0, this.simpleFramebuffer.getColorAttachment());
+                                ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:162: error: cannot find symbol
+                    RenderSystem.setShaderTexture(1, var4.getColorAttachment());
+                                ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:165: error: cannot find symbol
+                    RenderSystem.setShaderTexture(2, var5);
+                                ^
+    symbol:   method setShaderTexture(int,GpuTexture)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:176: error: cannot find symbol
+                    RenderSystem.setShaderTexture(0, 0);
+                                ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:177: error: cannot find symbol
+                    RenderSystem.setShaderTexture(1, 0);
+                                ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:178: error: cannot find symbol
+                    RenderSystem.setShaderTexture(2, 0);
+                                ^
+    symbol:   method setShaderTexture(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:183: error: cannot find symbol
+                    RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                                ^
+    symbol:   method setShaderColor(float,float,float,float)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:184: error: cannot find symbol
+                    mc.getFramebuffer().beginWrite(true);
+                                       ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:211: error: cannot find symbol
+        mc.getFramebuffer().beginWrite(true);
+                           ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:216: error: cannot find symbol
+           RenderSystem.bindTexture(depthTex);
+                       ^
+    symbol:   method bindTexture(int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:220: error: cannot find symbol
+           RenderSystem.bindTexture(0);
+                       ^
+    symbol:   method bindTexture(int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:268: error: cannot find symbol
+              var5.beginWrite(false);
+                  ^
+    symbol:   method beginWrite(boolean)
+    location: variable var5 of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:271: error: cannot find symbol
+              RenderSystem.depthFunc(515);
+                          ^
+    symbol:   method depthFunc(int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:274: error: cannot find symbol
+              RenderSystem.colorMask(true, true, true, true);
+                          ^
+    symbol:   method colorMask(boolean,boolean,boolean,boolean)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:292: error: cannot find symbol
+              RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                          ^
+    symbol:   method setShaderColor(float,float,float,float)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:300: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(Matrix4f)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:307: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(float)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Ambience.java:314: error: cannot find symbol
+           var6.set(x, y, z);
+               ^
+    symbol:   method set(float,float,float)
+    location: variable var6 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:477: error: cannot find symbol
+           var16.push();
+                ^
+    symbol:   method push()
+    location: variable var16 of type Matrix3x2fStack
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:486: error: cannot find symbol
+              var16.pop();
+                   ^
+    symbol:   method pop()
+    location: variable var16 of type Matrix3x2fStack
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Interface.java:640: error: cannot find symbol
+              var16.pop();
+                   ^
+    symbol:   method pop()
+    location: variable var16 of type Matrix3x2fStack
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:101: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.textureId);
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\JumpCircle.java:118: error: cannot find symbol
+           RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                       ^
+    symbol:   method setShaderColor(float,float,float,float)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\FakePlayer.java:56: error: cannot find symbol
+              mc.player.resetLastAttackedTicks();
+                       ^
+    symbol:   method resetLastAttackedTicks()
+    location: variable player of type ClientPlayerEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:566: error: cannot find symbol
+           ShaderProgram var16 = mc.getShaderLoader().getOrCreateProgram(ShaderUtils.lightning);
+                                                     ^
+    symbol:   method getOrCreateProgram(ShaderProgramKey)
+    location: class ShaderLoader
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:571: error: cannot find symbol
+                 var17.set((float)(now % 100000L) / 1000.0F + bolt.flickerSeed);
+                      ^
+    symbol:   method set(float)
+    location: variable var17 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:576: error: cannot find symbol
+                 var18.set(reveal);
+                      ^
+    symbol:   method set(float)
+    location: variable var18 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:746: error: cannot find symbol
+              RenderSystem.setShaderTexture(0, this.helper4());
+                          ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1601: error: cannot find symbol
+              Vec3d var31 = var30.getEntityPos();
+                                 ^
+    symbol:   method getEntityPos()
+    location: variable var30 of type Camera
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1779: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.helper3());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1817: error: cannot find symbol
+              RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                          ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:1899: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.helper4());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2011: error: cannot find symbol
+                 RenderSystem.setShaderTexture(0, this.helper4());
+                             ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2070: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.helper4());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\TargetESP.java:2188: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.helper4());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\TargetPearl.java:210: error: cannot find symbol
+        Vec3d var3 = pearl.getPos();
+                          ^
+    symbol:   method getPos()
+    location: variable pearl of type EnderPearlEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\TargetPearl.java:217: error: cannot find symbol
+        Vec3d var2 = pearl.getPos();
+                          ^
+    symbol:   method getPos()
+    location: variable pearl of type EnderPearlEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:108: error: cannot find symbol
+           for (ItemStack var5 : var3.getArmorItems()) {
+                                     ^
+    symbol:   method getArmorItems()
+    location: variable var3 of type PlayerEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AimBot.java:175: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, this.computeIdentifier());
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:579: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:704: error: cannot find symbol
+        RenderSystem.setShaderTexture(0, TEXTURE_ID2);
+                    ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\Trajectories.java:884: error: cannot find symbol
+           RenderSystem.setShaderTexture(0, TEXTURE_ID);
+                       ^
+    symbol:   method setShaderTexture(int,Identifier)
+    location: class RenderSystem
+  100 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 14s
+1 actionable task: 1 executed

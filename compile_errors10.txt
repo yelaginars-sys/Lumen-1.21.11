@@ -1,0 +1,84 @@
+
+> Configure project :
+Fabric Loom: 1.14.10
+
+> Task :compileJava FAILED
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\hands\ShaderHandsRenderer.java:93: error: <identifier> expected
+                  this.// framebuffer3.beginWrite
+                       ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\hands\ShaderHandsRenderer.java:93: error: not a statement
+                  this.// framebuffer3.beginWrite
+                      ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\hands\ShaderHandsRenderer.java:369: error: as of release 8, 'this' is allowed as the parameter name for the receiver type only
+         this.handleShader3(var3, "uDt", var7);
+         ^
+  which has to be the first parameter, and cannot be a lambda parameter
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\base\implement\TargetHud.java:221: error: <identifier> expected
+      this.// framebuffer.beginWrite
+           ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\base\implement\TargetHud.java:221: error: not a statement
+      this.// framebuffer.beginWrite
+          ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: <identifier> expected
+               this.// framebuffer.beginWrite
+                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: not a statement
+               this.// framebuffer.beginWrite
+                   ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\NameTags.java:274: error: <identifier> expected
+               this.// framebuffer.beginWrite
+                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\NameTags.java:274: error: not a statement
+               this.// framebuffer.beginWrite
+                   ^
+9 errors
+
+[Incubating] Problems report is available at: file:///C:/Users/yelag/Downloads/Lumen-1.21.11/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\hands\ShaderHandsRenderer.java:93: error: not a statement
+                    this.// framebuffer3.beginWrite
+                        ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\base\implement\TargetHud.java:221: error: not a statement
+        this.// framebuffer.beginWrite
+            ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: not a statement
+                 this.// framebuffer.beginWrite
+                     ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\NameTags.java:274: error: not a statement
+                 this.// framebuffer.beginWrite
+                     ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\hands\ShaderHandsRenderer.java:369: error: as of release 8, 'this' is allowed as the parameter name for the receiver type only
+           this.handleShader3(var3, "uDt", var7);
+           ^
+    which has to be the first parameter, and cannot be a lambda parameter
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\utils\render\hands\ShaderHandsRenderer.java:93: error: <identifier> expected
+                    this.// framebuffer3.beginWrite
+                         ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\base\implement\TargetHud.java:221: error: <identifier> expected
+        this.// framebuffer.beginWrite
+             ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: <identifier> expected
+                 this.// framebuffer.beginWrite
+                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\NameTags.java:274: error: <identifier> expected
+                 this.// framebuffer.beginWrite
+                      ^
+  9 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 3s
+1 actionable task: 1 executed

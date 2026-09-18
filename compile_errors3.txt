@@ -1,0 +1,848 @@
+
+> Configure project :
+Fabric Loom: 1.14.10
+
+> Task :compileJava
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\FriendCommand.java:21: error: cannot find symbol
+                        String var4 = var3.getProfile().getName();
+                                                       ^
+  symbol:   method getName()
+  location: class GameProfile
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\RCTCommand.java:275: error: selectedSlot has private access in PlayerInventory
+            mc.player.getInventory().selectedSlot = slot;
+                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\RCTCommand.java:371: error: cannot find symbol
+         mc.player.networkHandler.sendCommand(command);
+                                 ^
+  symbol:   method sendCommand(String)
+  location: variable networkHandler of type ClientPlayNetworkHandler
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\StaffCommand.java:21: error: cannot find symbol
+                        String var4 = var3.getProfile().getName();
+                                                       ^
+  symbol:   method getName()
+  location: class GameProfile
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:40: error: cannot find symbol
+            this.simpleFramebuffer.beginWrite(true);
+                                  ^
+  symbol:   method beginWrite(boolean)
+  location: variable simpleFramebuffer of type SimpleFramebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:41: error: cannot find symbol
+            var8.draw(targetWidth, targetHeight);
+                ^
+  symbol:   method draw(int,int)
+  location: variable var8 of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:42: error: cannot find symbol
+            this.simpleFramebuffer.endWrite();
+                                  ^
+  symbol:   method endWrite()
+  location: variable simpleFramebuffer of type SimpleFramebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:43: error: cannot find symbol
+            var8.beginWrite(true);
+                ^
+  symbol:   method beginWrite(boolean)
+  location: variable var8 of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:44: error: no suitable method found for takeScreenshot(SimpleFramebuffer)
+            NativeImage var9 = ScreenshotRecorder.takeScreenshot(this.simpleFramebuffer);
+                                                 ^
+    method ScreenshotRecorder.takeScreenshot(Framebuffer,Consumer<NativeImage>) is not applicable
+      (actual and formal argument lists differ in length)
+    method ScreenshotRecorder.takeScreenshot(Framebuffer,int,Consumer<NativeImage>) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:82: error: constructor SimpleFramebuffer in class SimpleFramebuffer cannot be applied to given types;
+         this.simpleFramebuffer = new SimpleFramebuffer(this.index, this.index2, false);
+                                  ^
+  required: String,int,int,boolean
+  found:    int,int,boolean
+  reason: actual and formal argument lists differ in length
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\storages\implement\CommandStorage.java:59: error: constructor ClientCommandSource in class ClientCommandSource cannot be applied to given types;
+      return new ClientCommandSource(null, MinecraftClient.getInstance());
+             ^
+  required: ClientPlayNetworkHandler,MinecraftClient,PermissionPredicate
+  found:    <null>,MinecraftClient
+  reason: actual and formal argument lists differ in length
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:447: error: cannot find symbol
+                        Vec3d var8 = Vec3d.fromPolar(target.getLerpTargetPitch(), target.getLerpTargetYaw());
+                                                           ^
+  symbol:   method getLerpTargetPitch()
+  location: variable target of type LivingEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:447: error: cannot find symbol
+                        Vec3d var8 = Vec3d.fromPolar(target.getLerpTargetPitch(), target.getLerpTargetYaw());
+                                                                                        ^
+  symbol:   method getLerpTargetYaw()
+  location: variable target of type LivingEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:901: error: selectedSlot has private access in PlayerInventory
+      int var3 = mc.player.getInventory().selectedSlot;
+                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:1099: error: cannot find symbol
+      for (ItemStack var3 : player.getArmorItems()) {
+                                  ^
+  symbol:   method getArmorItems()
+  location: variable player of type PlayerEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:1122: error: cannot find symbol
+            Vec3d var5 = this.target2.getPos().add(0.0, this.target2.getHeight() / 2.0, 0.0);
+                                     ^
+  symbol:   method getPos()
+  location: variable target2 of type LivingEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:28: error: cannot find symbol
+                  ItemStack var5 = mc.player.getInventory().getArmorStack(var4);
+                                                           ^
+  symbol:   method getArmorStack(int)
+  location: class PlayerInventory
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:51: error: cannot find symbol
+      return mc.player.input.movementForward != 0.0F || mc.player.input.movementSideways != 0.0F;
+                            ^
+  symbol:   variable movementForward
+  location: variable input of type Input
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:51: error: cannot find symbol
+      return mc.player.input.movementForward != 0.0F || mc.player.input.movementSideways != 0.0F;
+                                                                       ^
+  symbol:   variable movementSideways
+  location: variable input of type Input
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoSwap.java:229: error: selectedSlot has private access in PlayerInventory
+      if (mc.player.getInventory().selectedSlot != slot) {
+                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoSwap.java:230: error: selectedSlot has private access in PlayerInventory
+         this.index2 = mc.player.getInventory().selectedSlot;
+                                               ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoSwap.java:242: error: selectedSlot has private access in PlayerInventory
+         if (slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                               ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoSwap.java:243: error: selectedSlot has private access in PlayerInventory
+            mc.player.getInventory().selectedSlot = slot;
+                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoTotem.java:495: error: cannot find symbol
+      Vec3d var2 = trident.getPos().subtract(mc.player.getEyePos());
+                          ^
+  symbol:   method getPos()
+  location: variable trident of type TridentEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoStan.java:135: error: selectedSlot has private access in PlayerInventory
+      this.index3 = mc.player.getInventory().selectedSlot;
+                                            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoStan.java:189: error: selectedSlot has private access in PlayerInventory
+         if (mc.player.getInventory().selectedSlot != slot) {
+                                     ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoStan.java:190: error: selectedSlot has private access in PlayerInventory
+            mc.player.getInventory().selectedSlot = slot;
+                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoFish.java:47: error: selectedSlot has private access in PlayerInventory
+         if (this.index != -1 && mc.player.getInventory().selectedSlot != this.index) {
+                                                         ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoFish.java:48: error: selectedSlot has private access in PlayerInventory
+            mc.player.getInventory().selectedSlot = this.index;
+                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoFish.java:83: error: selectedSlot has private access in PlayerInventory
+               if (mc.player.getInventory().selectedSlot != this.index) {
+                                           ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoFish.java:84: error: selectedSlot has private access in PlayerInventory
+                  mc.player.getInventory().selectedSlot = this.index;
+                                          ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoCore.java:935: error: selectedSlot has private access in PlayerInventory
+      if (!mc.player.getInventory().getStack(mc.player.getInventory().selectedSlot).isEmpty()) {
+                                                                     ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoCore.java:1024: error: selectedSlot has private access in PlayerInventory
+      if (slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoCore.java:1025: error: selectedSlot has private access in PlayerInventory
+         mc.player.getInventory().selectedSlot = slot;
+                                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:980: error: method does not override or implement a method from a supertype
+            @Override
+            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1222: error: cannot find symbol
+                     if (var20 instanceof SignBlockEntity var21 && !(var8.getSquaredDistance(var21.getEntityPos()) > var6)) {
+                                                                                                  ^
+  symbol:   method getEntityPos()
+  location: variable var21 of type SignBlockEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1229: error: cannot find symbol
+                           BlockPos var23 = this.computeBlockPos4(var21.getEntityPos());
+                                                                       ^
+  symbol:   method getEntityPos()
+  location: variable var21 of type SignBlockEntity
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1459: error: selectedSlot has private access in PlayerInventory
+      if (!mc.player.getInventory().getStack(mc.player.getInventory().selectedSlot).isEmpty()) {
+                                                                     ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1692: error: selectedSlot has private access in PlayerInventory
+      if (slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1693: error: selectedSlot has private access in PlayerInventory
+         mc.player.getInventory().selectedSlot = slot;
+                                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\EndLooter.java:580: error: selectedSlot has private access in PlayerInventory
+      if (slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                            ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\EndLooter.java:581: error: selectedSlot has private access in PlayerInventory
+         mc.player.getInventory().selectedSlot = slot;
+                                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1015: error: selectedSlot has private access in PlayerInventory
+            mc.player.getInventory().selectedSlot = var3;
+                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1045: error: selectedSlot has private access in PlayerInventory
+      if (var5 != -1 && var5 != mc.player.getInventory().selectedSlot) {
+                                                        ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1849: error: selectedSlot has private access in PlayerInventory
+            mc.player.getInventory().selectedSlot = var3;
+                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1868: error: selectedSlot has private access in PlayerInventory
+            int var3 = mc.player.getInventory().selectedSlot;
+                                               ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1877: error: selectedSlot has private access in PlayerInventory
+               mc.player.getInventory().selectedSlot = var4;
+                                       ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2362: error: selectedSlot has private access in PlayerInventory
+      return mc.player.getInventory().selectedSlot;
+                                     ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2732: error: selectedSlot has private access in PlayerInventory
+               if (var1.selectedSlot != var2) {
+                       ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2733: error: selectedSlot has private access in PlayerInventory
+                  var1.selectedSlot = var2;
+                      ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2740: error: selectedSlot has private access in PlayerInventory
+         if (var1.selectedSlot != 0) {
+                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2741: error: selectedSlot has private access in PlayerInventory
+            var1.selectedSlot = 0;
+                ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\CocoaFarm.java:346: error: selectedSlot has private access in PlayerInventory
+            mc.player.getInventory().selectedSlot = var1;
+                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\CocoaFarm.java:362: error: selectedSlot has private access in PlayerInventory
+                  mc.player.getInventory().selectedSlot,
+                                          ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoInvisible.java:79: error: selectedSlot has private access in PlayerInventory
+               this.index = mc.player.getInventory().selectedSlot;
+                                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoInvisible.java:137: error: selectedSlot has private access in PlayerInventory
+            var3 = this.index >= 0 ? this.index : player.getInventory().selectedSlot;
+                                                                       ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoInvisible.java:233: error: selectedSlot has private access in PlayerInventory
+      if (mc.player != null && slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                                                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoInvisible.java:234: error: selectedSlot has private access in PlayerInventory
+         mc.player.getInventory().selectedSlot = slot;
+                                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:54: error: selectedSlot has private access in PlayerInventory
+            this.index = mc.player.getInventory().selectedSlot;
+                                                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:125: error: selectedSlot has private access in PlayerInventory
+            this.helper9(this.index == -1 ? var1.getInventory().selectedSlot : this.index);
+                                                               ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:126: error: selectedSlot has private access in PlayerInventory
+            this.helper10(var2, var1.getInventory().selectedSlot);
+                                                   ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:150: error: selectedSlot has private access in PlayerInventory
+      int var2 = var1.getInventory().selectedSlot;
+                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:181: error: selectedSlot has private access in PlayerInventory
+      if (mc.player != null && slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                                                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:182: error: selectedSlot has private access in PlayerInventory
+         mc.player.getInventory().selectedSlot = slot;
+                                 ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:212: error: selectedSlot has private access in PlayerInventory
+            int var1 = this.index == -1 ? mc.player.getInventory().selectedSlot : this.index;
+                                                                  ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ShaderEsp.java:159: error: bad operand types for binary operator '!='
+            if (var2 != null && var2.getColorAttachment() != 0) {
+                                                          ^
+  first type:  GpuTexture
+  second type: int
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:105: error: cannot find symbol
+         ShaderProgram var3 = mc.getShaderLoader().getOrCreateProgram(var2);
+                                                  ^
+  symbol:   method getOrCreateProgram(ShaderProgramKey)
+  location: class ShaderLoader
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:109: error: cannot find symbol
+            Vec3d var7 = event.getCamera().getPos();
+                                          ^
+  symbol:   method getPos()
+  location: class Camera
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:115: error: cannot find symbol
+            RenderSystem.enableBlend();
+                        ^
+  symbol:   method enableBlend()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:116: error: cannot find symbol
+            RenderSystem.blendFunc(770, 1);
+                        ^
+  symbol:   method blendFunc(int,int)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:117: error: cannot find symbol
+            RenderSystem.enableDepthTest();
+                        ^
+  symbol:   method enableDepthTest()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:118: error: cannot find symbol
+            RenderSystem.depthMask(false);
+                        ^
+  symbol:   method depthMask(boolean)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:119: error: cannot find symbol
+            RenderSystem.disableCull();
+                        ^
+  symbol:   method disableCull()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:120: error: cannot find symbol
+            RenderSystem.setShader(var2);
+                        ^
+  symbol:   method setShader(ShaderProgramKey)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:125: error: package VertexFormat does not exist
+            BufferBuilder var14 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                              ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:179: error: cannot find symbol
+            RenderSystem.depthMask(true);
+                        ^
+  symbol:   method depthMask(boolean)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:180: error: cannot find symbol
+            RenderSystem.enableCull();
+                        ^
+  symbol:   method enableCull()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:181: error: cannot find symbol
+            RenderSystem.disableBlend();
+                        ^
+  symbol:   method disableBlend()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:182: error: cannot find symbol
+            RenderSystem.defaultBlendFunc();
+                        ^
+  symbol:   method defaultBlendFunc()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:243: error: cannot find symbol
+         var4.set(value);
+             ^
+  symbol:   method set(float)
+  location: variable var4 of type GlUniform
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoTool.java:27: error: selectedSlot has private access in PlayerInventory
+               this.index = mc.player.getInventory().selectedSlot;
+                                                    ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoTool.java:45: error: selectedSlot has private access in PlayerInventory
+         if (mc.player.getInventory().selectedSlot != slot) {
+                                     ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoTool.java:49: error: selectedSlot has private access in PlayerInventory
+               mc.player.getInventory().selectedSlot = slot;
+                                       ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoTool.java:52: error: selectedSlot has private access in PlayerInventory
+               mc.player.getInventory().selectedSlot = slot;
+                                       ^
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:114: error: cannot find symbol
+            Vec3d var3 = event.getCamera().getPos();
+                                          ^
+  symbol:   method getPos()
+  location: class Camera
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:126: error: cannot find symbol
+               this.framebuffer.setClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+                               ^
+  symbol:   method setClearColor(float,float,float,float)
+  location: variable framebuffer of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:127: error: cannot find symbol
+               this.framebuffer.clear();
+                               ^
+  symbol:   method clear()
+  location: variable framebuffer of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: cannot find symbol
+               this.framebuffer.beginWrite(false);
+                               ^
+  symbol:   method beginWrite(boolean)
+  location: variable framebuffer of type Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:130: error: cannot find symbol
+               RenderSystem.enableBlend();
+                           ^
+  symbol:   method enableBlend()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:131: error: cannot find symbol
+               RenderSystem.defaultBlendFunc();
+                           ^
+  symbol:   method defaultBlendFunc()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:132: error: cannot find symbol
+               RenderSystem.disableCull();
+                           ^
+  symbol:   method disableCull()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:133: error: cannot find symbol
+               RenderSystem.enableDepthTest();
+                           ^
+  symbol:   method enableDepthTest()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:134: error: cannot find symbol
+               RenderSystem.depthMask(false);
+                           ^
+  symbol:   method depthMask(boolean)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:135: error: cannot find symbol
+               RenderSystem.setShader(ShaderProgramKeys.POSITION_COLOR);
+                           ^
+  symbol:   method setShader(ShaderProgramKey)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:145: error: cannot find symbol
+               RenderSystem.depthMask(true);
+                           ^
+  symbol:   method depthMask(boolean)
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:146: error: cannot find symbol
+               RenderSystem.disableDepthTest();
+                           ^
+  symbol:   method disableDepthTest()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:147: error: cannot find symbol
+               RenderSystem.enableCull();
+                           ^
+  symbol:   method enableCull()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:148: error: cannot find symbol
+               RenderSystem.disableBlend();
+                           ^
+  symbol:   method disableBlend()
+  location: class RenderSystem
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:149: error: cannot find symbol
+               mc.getFramebuffer().beginWrite(false);
+                                  ^
+  symbol:   method beginWrite(boolean)
+  location: class Framebuffer
+C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:165: error: cannot find symbol
+               ShaderProgram var2 = mc.getShaderLoader().getOrCreateProgram(ShaderUtils.blockOverlay);
+                                                        ^
+  symbol:   method getOrCreateProgram(ShaderProgramKey)
+  location: class ShaderLoader
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+100 errors
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/yelag/Downloads/Lumen-1.21.11/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:82: error: constructor SimpleFramebuffer in class SimpleFramebuffer cannot be applied to given types;
+           this.simpleFramebuffer = new SimpleFramebuffer(this.index, this.index2, false);
+                                    ^
+    required: String,int,int,boolean
+    found:    int,int,boolean
+    reason: actual and formal argument lists differ in length
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\storages\implement\CommandStorage.java:59: error: constructor ClientCommandSource in class ClientCommandSource cannot be applied to given types;
+        return new ClientCommandSource(null, MinecraftClient.getInstance());
+               ^
+    required: ClientPlayNetworkHandler,MinecraftClient,PermissionPredicate
+    found:    <null>,MinecraftClient
+    reason: actual and formal argument lists differ in length
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:44: error: no suitable method found for takeScreenshot(SimpleFramebuffer)
+              NativeImage var9 = ScreenshotRecorder.takeScreenshot(this.simpleFramebuffer);
+                                                   ^
+      method ScreenshotRecorder.takeScreenshot(Framebuffer,Consumer<NativeImage>) is not applicable
+        (actual and formal argument lists differ in length)
+      method ScreenshotRecorder.takeScreenshot(Framebuffer,int,Consumer<NativeImage>) is not applicable
+        (actual and formal argument lists differ in length)
+  Note: Recompile with -Xlint:deprecation for details.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:51: error: cannot find symbol
+        return mc.player.input.movementForward != 0.0F || mc.player.input.movementSideways != 0.0F;
+                              ^
+    symbol:   variable movementForward
+    location: variable input of type Input
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:51: error: cannot find symbol
+        return mc.player.input.movementForward != 0.0F || mc.player.input.movementSideways != 0.0F;
+                                                                         ^
+    symbol:   variable movementSideways
+    location: variable input of type Input
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\RCTCommand.java:275: error: selectedSlot has private access in PlayerInventory
+              mc.player.getInventory().selectedSlot = slot;
+                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:901: error: selectedSlot has private access in PlayerInventory
+        int var3 = mc.player.getInventory().selectedSlot;
+                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoSwap.java:229: error: selectedSlot has private access in PlayerInventory
+        if (mc.player.getInventory().selectedSlot != slot) {
+                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoSwap.java:230: error: selectedSlot has private access in PlayerInventory
+           this.index2 = mc.player.getInventory().selectedSlot;
+                                                 ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoSwap.java:242: error: selectedSlot has private access in PlayerInventory
+           if (slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                                 ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoSwap.java:243: error: selectedSlot has private access in PlayerInventory
+              mc.player.getInventory().selectedSlot = slot;
+                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoStan.java:135: error: selectedSlot has private access in PlayerInventory
+        this.index3 = mc.player.getInventory().selectedSlot;
+                                              ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoStan.java:189: error: selectedSlot has private access in PlayerInventory
+           if (mc.player.getInventory().selectedSlot != slot) {
+                                       ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoStan.java:190: error: selectedSlot has private access in PlayerInventory
+              mc.player.getInventory().selectedSlot = slot;
+                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoFish.java:47: error: selectedSlot has private access in PlayerInventory
+           if (this.index != -1 && mc.player.getInventory().selectedSlot != this.index) {
+                                                           ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoFish.java:48: error: selectedSlot has private access in PlayerInventory
+              mc.player.getInventory().selectedSlot = this.index;
+                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoFish.java:83: error: selectedSlot has private access in PlayerInventory
+                 if (mc.player.getInventory().selectedSlot != this.index) {
+                                             ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoFish.java:84: error: selectedSlot has private access in PlayerInventory
+                    mc.player.getInventory().selectedSlot = this.index;
+                                            ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoCore.java:935: error: selectedSlot has private access in PlayerInventory
+        if (!mc.player.getInventory().getStack(mc.player.getInventory().selectedSlot).isEmpty()) {
+                                                                       ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoCore.java:1024: error: selectedSlot has private access in PlayerInventory
+        if (slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                              ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoCore.java:1025: error: selectedSlot has private access in PlayerInventory
+           mc.player.getInventory().selectedSlot = slot;
+                                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1459: error: selectedSlot has private access in PlayerInventory
+        if (!mc.player.getInventory().getStack(mc.player.getInventory().selectedSlot).isEmpty()) {
+                                                                       ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1692: error: selectedSlot has private access in PlayerInventory
+        if (slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                              ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1693: error: selectedSlot has private access in PlayerInventory
+           mc.player.getInventory().selectedSlot = slot;
+                                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\EndLooter.java:580: error: selectedSlot has private access in PlayerInventory
+        if (slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                              ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\EndLooter.java:581: error: selectedSlot has private access in PlayerInventory
+           mc.player.getInventory().selectedSlot = slot;
+                                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1015: error: selectedSlot has private access in PlayerInventory
+              mc.player.getInventory().selectedSlot = var3;
+                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1045: error: selectedSlot has private access in PlayerInventory
+        if (var5 != -1 && var5 != mc.player.getInventory().selectedSlot) {
+                                                          ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1849: error: selectedSlot has private access in PlayerInventory
+              mc.player.getInventory().selectedSlot = var3;
+                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1868: error: selectedSlot has private access in PlayerInventory
+              int var3 = mc.player.getInventory().selectedSlot;
+                                                 ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:1877: error: selectedSlot has private access in PlayerInventory
+                 mc.player.getInventory().selectedSlot = var4;
+                                         ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2362: error: selectedSlot has private access in PlayerInventory
+        return mc.player.getInventory().selectedSlot;
+                                       ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2732: error: selectedSlot has private access in PlayerInventory
+                 if (var1.selectedSlot != var2) {
+                         ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2733: error: selectedSlot has private access in PlayerInventory
+                    var1.selectedSlot = var2;
+                        ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2740: error: selectedSlot has private access in PlayerInventory
+           if (var1.selectedSlot != 0) {
+                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoMine.java:2741: error: selectedSlot has private access in PlayerInventory
+              var1.selectedSlot = 0;
+                  ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\CocoaFarm.java:346: error: selectedSlot has private access in PlayerInventory
+              mc.player.getInventory().selectedSlot = var1;
+                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\CocoaFarm.java:362: error: selectedSlot has private access in PlayerInventory
+                    mc.player.getInventory().selectedSlot,
+                                            ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoInvisible.java:79: error: selectedSlot has private access in PlayerInventory
+                 this.index = mc.player.getInventory().selectedSlot;
+                                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoInvisible.java:137: error: selectedSlot has private access in PlayerInventory
+              var3 = this.index >= 0 ? this.index : player.getInventory().selectedSlot;
+                                                                         ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoInvisible.java:233: error: selectedSlot has private access in PlayerInventory
+        if (mc.player != null && slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                                                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoInvisible.java:234: error: selectedSlot has private access in PlayerInventory
+           mc.player.getInventory().selectedSlot = slot;
+                                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:54: error: selectedSlot has private access in PlayerInventory
+              this.index = mc.player.getInventory().selectedSlot;
+                                                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:125: error: selectedSlot has private access in PlayerInventory
+              this.helper9(this.index == -1 ? var1.getInventory().selectedSlot : this.index);
+                                                                 ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:126: error: selectedSlot has private access in PlayerInventory
+              this.helper10(var2, var1.getInventory().selectedSlot);
+                                                     ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:150: error: selectedSlot has private access in PlayerInventory
+        int var2 = var1.getInventory().selectedSlot;
+                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:181: error: selectedSlot has private access in PlayerInventory
+        if (mc.player != null && slot >= 0 && slot <= 8 && mc.player.getInventory().selectedSlot != slot) {
+                                                                                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:182: error: selectedSlot has private access in PlayerInventory
+           mc.player.getInventory().selectedSlot = slot;
+                                   ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoEat.java:212: error: selectedSlot has private access in PlayerInventory
+              int var1 = this.index == -1 ? mc.player.getInventory().selectedSlot : this.index;
+                                                                    ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoTool.java:27: error: selectedSlot has private access in PlayerInventory
+                 this.index = mc.player.getInventory().selectedSlot;
+                                                      ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoTool.java:45: error: selectedSlot has private access in PlayerInventory
+           if (mc.player.getInventory().selectedSlot != slot) {
+                                       ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoTool.java:49: error: selectedSlot has private access in PlayerInventory
+                 mc.player.getInventory().selectedSlot = slot;
+                                         ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoTool.java:52: error: selectedSlot has private access in PlayerInventory
+                 mc.player.getInventory().selectedSlot = slot;
+                                         ^
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ShaderEsp.java:159: error: bad operand types for binary operator '!='
+              if (var2 != null && var2.getColorAttachment() != 0) {
+                                                            ^
+    first type:  GpuTexture
+    second type: int
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:980: error: method does not override or implement a method from a supertype
+              @Override
+              ^
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  Note: Some input files use unchecked or unsafe operations.
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:125: error: package VertexFormat does not exist
+              BufferBuilder var14 = Tessellator.getInstance().begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR);
+                                                                                ^
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\FriendCommand.java:21: error: cannot find symbol
+                          String var4 = var3.getProfile().getName();
+                                                         ^
+    symbol:   method getName()
+    location: class GameProfile
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\RCTCommand.java:371: error: cannot find symbol
+           mc.player.networkHandler.sendCommand(command);
+                                   ^
+    symbol:   method sendCommand(String)
+    location: variable networkHandler of type ClientPlayNetworkHandler
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\api\commands\impl\StaffCommand.java:21: error: cannot find symbol
+                          String var4 = var3.getProfile().getName();
+                                                         ^
+    symbol:   method getName()
+    location: class GameProfile
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:40: error: cannot find symbol
+              this.simpleFramebuffer.beginWrite(true);
+                                    ^
+    symbol:   method beginWrite(boolean)
+    location: variable simpleFramebuffer of type SimpleFramebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:41: error: cannot find symbol
+              var8.draw(targetWidth, targetHeight);
+                  ^
+    symbol:   method draw(int,int)
+    location: variable var8 of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:42: error: cannot find symbol
+              this.simpleFramebuffer.endWrite();
+                                    ^
+    symbol:   method endWrite()
+    location: variable simpleFramebuffer of type SimpleFramebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\render\portal\PortalScreenCapture.java:43: error: cannot find symbol
+              var8.beginWrite(true);
+                  ^
+    symbol:   method beginWrite(boolean)
+    location: variable var8 of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:447: error: cannot find symbol
+                          Vec3d var8 = Vec3d.fromPolar(target.getLerpTargetPitch(), target.getLerpTargetYaw());
+                                                             ^
+    symbol:   method getLerpTargetPitch()
+    location: variable target of type LivingEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:447: error: cannot find symbol
+                          Vec3d var8 = Vec3d.fromPolar(target.getLerpTargetPitch(), target.getLerpTargetYaw());
+                                                                                          ^
+    symbol:   method getLerpTargetYaw()
+    location: variable target of type LivingEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:1099: error: cannot find symbol
+        for (ItemStack var3 : player.getArmorItems()) {
+                                    ^
+    symbol:   method getArmorItems()
+    location: variable player of type PlayerEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\Aura.java:1122: error: cannot find symbol
+              Vec3d var5 = this.target2.getPos().add(0.0, this.target2.getHeight() / 2.0, 0.0);
+                                       ^
+    symbol:   method getPos()
+    location: variable target2 of type LivingEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\player\AutoArmor.java:28: error: cannot find symbol
+                    ItemStack var5 = mc.player.getInventory().getArmorStack(var4);
+                                                             ^
+    symbol:   method getArmorStack(int)
+    location: class PlayerInventory
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\combat\AutoTotem.java:495: error: cannot find symbol
+        Vec3d var2 = trident.getPos().subtract(mc.player.getEyePos());
+                            ^
+    symbol:   method getPos()
+    location: variable trident of type TridentEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1222: error: cannot find symbol
+                       if (var20 instanceof SignBlockEntity var21 && !(var8.getSquaredDistance(var21.getEntityPos()) > var6)) {
+                                                                                                    ^
+    symbol:   method getEntityPos()
+    location: variable var21 of type SignBlockEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\misc\AutoZamok.java:1229: error: cannot find symbol
+                             BlockPos var23 = this.computeBlockPos4(var21.getEntityPos());
+                                                                         ^
+    symbol:   method getEntityPos()
+    location: variable var21 of type SignBlockEntity
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:105: error: cannot find symbol
+           ShaderProgram var3 = mc.getShaderLoader().getOrCreateProgram(var2);
+                                                    ^
+    symbol:   method getOrCreateProgram(ShaderProgramKey)
+    location: class ShaderLoader
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:109: error: cannot find symbol
+              Vec3d var7 = event.getCamera().getPos();
+                                            ^
+    symbol:   method getPos()
+    location: class Camera
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:115: error: cannot find symbol
+              RenderSystem.enableBlend();
+                          ^
+    symbol:   method enableBlend()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:116: error: cannot find symbol
+              RenderSystem.blendFunc(770, 1);
+                          ^
+    symbol:   method blendFunc(int,int)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:117: error: cannot find symbol
+              RenderSystem.enableDepthTest();
+                          ^
+    symbol:   method enableDepthTest()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:118: error: cannot find symbol
+              RenderSystem.depthMask(false);
+                          ^
+    symbol:   method depthMask(boolean)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:119: error: cannot find symbol
+              RenderSystem.disableCull();
+                          ^
+    symbol:   method disableCull()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:120: error: cannot find symbol
+              RenderSystem.setShader(var2);
+                          ^
+    symbol:   method setShader(ShaderProgramKey)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:179: error: cannot find symbol
+              RenderSystem.depthMask(true);
+                          ^
+    symbol:   method depthMask(boolean)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:180: error: cannot find symbol
+              RenderSystem.enableCull();
+                          ^
+    symbol:   method enableCull()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:181: error: cannot find symbol
+              RenderSystem.disableBlend();
+                          ^
+    symbol:   method disableBlend()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:182: error: cannot find symbol
+              RenderSystem.defaultBlendFunc();
+                          ^
+    symbol:   method defaultBlendFunc()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\ViralJump.java:243: error: cannot find symbol
+           var4.set(value);
+               ^
+    symbol:   method set(float)
+    location: variable var4 of type GlUniform
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:114: error: cannot find symbol
+              Vec3d var3 = event.getCamera().getPos();
+                                            ^
+    symbol:   method getPos()
+    location: class Camera
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:126: error: cannot find symbol
+                 this.framebuffer.setClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+                                 ^
+    symbol:   method setClearColor(float,float,float,float)
+    location: variable framebuffer of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:127: error: cannot find symbol
+                 this.framebuffer.clear();
+                                 ^
+    symbol:   method clear()
+    location: variable framebuffer of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:129: error: cannot find symbol
+                 this.framebuffer.beginWrite(false);
+                                 ^
+    symbol:   method beginWrite(boolean)
+    location: variable framebuffer of type Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:130: error: cannot find symbol
+                 RenderSystem.enableBlend();
+                             ^
+    symbol:   method enableBlend()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:131: error: cannot find symbol
+                 RenderSystem.defaultBlendFunc();
+                             ^
+    symbol:   method defaultBlendFunc()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:132: error: cannot find symbol
+                 RenderSystem.disableCull();
+                             ^
+    symbol:   method disableCull()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:133: error: cannot find symbol
+                 RenderSystem.enableDepthTest();
+                             ^
+    symbol:   method enableDepthTest()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:134: error: cannot find symbol
+                 RenderSystem.depthMask(false);
+                             ^
+    symbol:   method depthMask(boolean)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:135: error: cannot find symbol
+                 RenderSystem.setShader(ShaderProgramKeys.POSITION_COLOR);
+                             ^
+    symbol:   method setShader(ShaderProgramKey)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:145: error: cannot find symbol
+                 RenderSystem.depthMask(true);
+                             ^
+    symbol:   method depthMask(boolean)
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:146: error: cannot find symbol
+                 RenderSystem.disableDepthTest();
+                             ^
+    symbol:   method disableDepthTest()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:147: error: cannot find symbol
+                 RenderSystem.enableCull();
+                             ^
+    symbol:   method enableCull()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:148: error: cannot find symbol
+                 RenderSystem.disableBlend();
+                             ^
+    symbol:   method disableBlend()
+    location: class RenderSystem
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:149: error: cannot find symbol
+                 mc.getFramebuffer().beginWrite(false);
+                                    ^
+    symbol:   method beginWrite(boolean)
+    location: class Framebuffer
+  C:\Users\yelag\Downloads\Lumen-1.21.11\src\main\java\dlc\lumen\client\modules\impl\render\BlockOverlay.java:165: error: cannot find symbol
+                 ShaderProgram var2 = mc.getShaderLoader().getOrCreateProgram(ShaderUtils.blockOverlay);
+                                                          ^
+    symbol:   method getOrCreateProgram(ShaderProgramKey)
+    location: class ShaderLoader
+  100 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 17s
+1 actionable task: 1 executed

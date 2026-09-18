@@ -1,0 +1,538 @@
+package dlc.lumen.client.ui.mainmenu;
+
+import dlc.lumen.api.utils.client.ClientSoundPlayer;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+import dlc.lumen.Lumen;
+import dlc.lumen.api.QClient;
+import dlc.lumen.api.utils.animation.AnimationUtils;
+import dlc.lumen.api.utils.animation.Easing;
+import dlc.lumen.api.utils.animation.Easings;
+import dlc.lumen.api.utils.color.ColorUtils;
+import dlc.lumen.api.utils.math.HoveringUtils;
+import dlc.lumen.api.utils.render.RenderUtils;
+import dlc.lumen.api.utils.render.ShaderUtils;
+import dlc.lumen.api.utils.render.blur.BlurProgram;
+import dlc.lumen.api.utils.render.fonts.msdf.Font;
+import dlc.lumen.api.utils.render.fonts.msdf.Fonts;
+import dlc.lumen.client.social.GlobalProfileAvatar;
+import dlc.lumen.client.ui.mainmenu.account.Account;
+import dlc.lumen.client.ui.mainmenu.account.AccountGuiScreen;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gl.GlUniform;
+import net.minecraft.client.gl.ShaderProgram;
+import net.minecraft.client.gui.Click;
+import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.gl.RenderPipelines;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;
+import net.minecraft.client.gui.screen.option.OptionsScreen;
+import net.minecraft.client.gui.screen.world.SelectWorldScreen;
+import net.minecraft.client.render.BufferBuilder;
+import net.minecraft.client.render.BufferRenderer;
+import net.minecraft.client.render.Tessellator;
+import net.minecraft.client.render.VertexFormats;
+import com.mojang.blaze3d.vertex.VertexFormat.DrawMode;
+import net.minecraft.client.sound.PositionedSoundInstance;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RotationAxis;
+import org.joml.Matrix4f;
+
+public class LumenMenuScreen extends Screen implements QClient {
+   private static final Identifier TEXTURE_ID2 = Identifier.of("lumen", "textures/mainmenu/single_bg.png");
+   private static final Identifier TEXTURE_ID3 = Identifier.of("lumen", "textures/mainmenu/multi_bg.png");
+   private static final Identifier TEXTURE_ID4 = Identifier.of("lumen", "textures/waterlogo/lumenik_small.png");
+   private static final String[] STRING = new String[]{"", "", ""};
+   private static final String[] STRING2 = new String[]{"web", "tg", "yt"};
+   private static final float VOLUME = 200.0F;
+   private static final float VOLUME2 = 26.0F;
+   private static final float VOLUME3 = 178.0F;
+   private static final float VOLUME4 = 18.0F;
+   private static final float VOLUME5 = 22.0F;
+   private final AnimationUtils animationUtils = new AnimationUtils(0.0F, 2.8F, Easings.CUBIC_OUT);
+   private final AnimationUtils animationUtils2 = new AnimationUtils(0.0F, 8.0F, Easings.CUBIC_OUT);
+   private final AnimationUtils animationUtils3 = new AnimationUtils(0.0F, 8.0F, Easings.CUBIC_OUT);
+   private final AnimationUtils animationUtils4 = new AnimationUtils(0.0F, 12.0F, Easings.CUBIC_OUT);
+   private final AnimationUtils animationUtils5 = new AnimationUtils(0.0F, 12.0F, Easings.CUBIC_OUT);
+   private float volume;
+   private long timestamp = Util.getMeasuringTimeMs();
+   private float volume2;
+   private boolean flag2;
+   private boolean flag3;
+   private final float[] volume3 = new float[4];
+   private final float[] volume5 = new float[4];
+   private final float[] volume6 = new float[4];
+   private final float[] volume7 = new float[4];
+   private static final String TEXT = "h";
+   private final float[][] value = new float[][]{new float[4], new float[4], new float[4]};
+   private final float[] volume8 = new float[4];
+   private final float[] volume9 = new float[4];
+   private static boolean flag4 = false;
+
+   public LumenMenuScreen() {
+      super(Text.empty());
+   }
+
+   @Override
+   protected void init() {
+      super.init();
+      this.animationUtils.setValue(0.0F);
+      if (!flag4) {
+         flag4 = true;
+         AccountGuiScreen.MANAGER.restoreLastSession();
+      }
+   }
+
+   @Override
+   public void renderBackground(DrawContext context, int mouseX, int mouseY, float delta) {
+   }
+
+   @Override
+   public boolean shouldPause() {
+      return false;
+   }
+
+   @Override
+   public boolean shouldCloseOnEsc() {
+      return false;
+   }
+
+   @Override
+   public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+      // Мост DrawContext для immediate-примитивов меню (панели/лого/блюр-заглушки)
+      RenderUtils.currentContext = context;
+      try {
+         this.renderInternal(context, mouseX, mouseY, delta);
+      } finally {
+         RenderUtils.currentContext = null;
+      }
+   }
+
+   private void renderInternal(DrawContext context, int mouseX, int mouseY, float delta) {
+      this.animationUtils.update(1.0F);
+      float var5 = MathHelper.clamp(this.animationUtils.getValue(), 0.0F, 1.0F);
+      long var6 = Util.getMeasuringTimeMs();
+      float var8 = Math.min(0.1F, (float)(var6 - this.timestamp) / 1000.0F);
+      this.timestamp = var6;
+      float var9 = (float)var6 / 1000.0F;
+      this.helper2(context, var5, mouseX, mouseY);
+      BlurProgram.getInstance().forceDraw();
+      if (!this.flag2 && !this.flag3 && this.volume2 > 0.0F) {
+         this.volume2 = Math.max(0.0F, this.volume2 - 0.08F);
+      }
+
+      float var10 = helper17(var5, 0.0F, 0.45F);
+      float var11 = helper17(var5, 0.1F, 0.45F);
+      float var12 = helper17(var5, 0.16F, 0.45F);
+      float var13 = helper17(var5, 0.24F, 0.52F);
+      float var14 = helper17(var5, 0.34F, 0.52F);
+      this.helper4(context, mouseX, mouseY, var11, var12, var8);
+      this.helper3(context, var10, var9);
+      float var18 = MathHelper.clamp(this.height * 0.5F - 48.0F + this.height * 0.035F, this.height * 0.16F, this.height - 96.0F);
+      this.helper8(context, mouseX, mouseY, var13, var18 + (1.0F - var13) * 20.0F, var8);
+      float var19 = var18 + 68.0F;
+      this.helper9(context, mouseX, mouseY, var14, var19 + (1.0F - var14) * 20.0F, var8);
+      super.render(context, mouseX, mouseY, delta);
+   }
+
+   private void helper2(DrawContext context, float r, double mouseX, double mouseY) {
+      MenuBackground.render(context, this.width, this.height);
+      MatrixStack matrices = new MatrixStack();
+      context.fill(0, 0, this.width, this.height, helper21(ColorUtils.rgb(5, 6, 10), (int)(150.0F * r)));
+      context.fill(0, 0, this.width, this.height, helper21(helper20(), (int)(22.0F * r)));
+      MenuParticles.render(context, this.width, this.height, mouseX, mouseY, r);
+   }
+
+   private void updateState(DrawContext context, float x, float y, float w, float h) {
+      MatrixStack var6 = new MatrixStack();
+      RenderUtils.drawBlur(var6, x + 0.25F, y, w - 0.5F, h, 8.0F, 5.0F, ColorUtils.getThemeColor());
+      RenderUtils.drawBlur(var6, x + 0.25F, y, w - 0.5F, h, 8.0F, 5.0F, ColorUtils.rgba(0, 0, 0, 195));
+   }
+
+   private static void updateState2(MatrixStack matrices, float x, float centerY, float h, int color) {
+      float var5 = h * 0.22F;
+      float var6 = h * 0.18F;
+      float var7 = h;
+      float var8 = h * 0.55F;
+      float var9 = var5 * 0.5F;
+      RenderUtils.drawImage(matrices, TEXTURE_ID4, x, centerY - var7 / 2.0F, var7, var7, color);
+   }
+
+   // TODO 1.21.11: custom MSDF fonts need pipeline rework; vanilla text fallback for menu
+   private static void drawCenteredText(DrawContext context, String text, float x, float y, int color) {
+      if (text != null) {
+         context.drawCenteredTextWithShadow(mc.textRenderer, text, (int)x, (int)y, color);
+      }
+   }
+
+   private void helper3(DrawContext context, float r, float time) {
+      float var4 = this.width / 2.0F;
+      float var5 = (float)Math.sin(time * 1.6F) * 1.8F;
+      float var6 = Math.max(34.0F, this.height * 0.13F) + var5 + (1.0F - r) * -8.0F;
+      float var7 = 40.0F * (0.9F + 0.1F * r);
+      float var8 = var7 * 1.02F;
+      updateState2(new MatrixStack(), var4 - var8 / 2.0F, var6 + var7 / 2.0F, var7, helper21(helper20(), (int)(255.0F * r)));
+      var6 += var7 + 6.0F;
+      drawCenteredText(context, "Lumen DLC", var4, var6, helper21(-1, (int)(255.0F * r)));
+      var6 += 12.0F;
+      drawCenteredText(context, "1.21.11", var4, var6, helper21(helper20(), (int)(200.0F * r)));
+   }
+
+   private void helper4(DrawContext context, int mouseX, int mouseY, float aLeft, float aRight, float dt) {
+      float var7 = 150.0F;
+      float var8 = 100.0F;
+      float var9 = this.height / 2.0F - var8 / 2.0F;
+      float var10 = Math.max(12.0F, this.width * 0.5F - 300.0F);
+      float var11 = Math.min(this.width - 12.0F - var7, this.width * 0.5F + 300.0F - var7);
+      helper22(this.volume8, var10, var9, var7, var8);
+      helper22(this.volume9, var11, var9, var7, var8);
+      float var12 = (1.0F - aLeft) * -34.0F;
+      float var13 = (1.0F - aRight) * 34.0F;
+      this.helper5(
+         context, this.volume8, var12, "Одиночная", "Singleplayer", TEXTURE_ID2, mouseX, mouseY, aLeft, this.animationUtils2, dt
+      );
+      this.helper5(context, this.volume9, var13, "Сетевая", "Multiplayer", TEXTURE_ID3, mouseX, mouseY, aRight, this.animationUtils3, dt);
+   }
+
+   private void helper5(
+      DrawContext context, float[] rc, float dx, String title, String sub, Identifier bg, int mouseX, int mouseY, float r, AnimationUtils hoverAnim, float dt
+   ) {
+      boolean var12 = helper23(mouseX, mouseY, rc) && !this.flag3;
+      hoverAnim.update(var12 ? 1.0F : 0.0F);
+      float var13 = hoverAnim.getValue();
+      float var14 = 5.0F * var13;
+      float var15 = 6.0F * var13;
+      float[] var16 = new float[]{rc[0] + dx - var14, rc[1] - var14 - var15, rc[2] + var14 * 2.0F, rc[3] + var14 * 2.0F};
+      MatrixStack var17 = new MatrixStack();
+      if (var13 > 0.001F) {
+         // TODO 1.21.11: rounded rect fallback is plain fill
+         context.fill((int)(var16[0] - 3.0F), (int)(var16[1] - 3.0F), (int)(var16[0] + var16[2] + 3.0F), (int)(var16[1] + var16[3] + 3.0F), helper21(-1, (int)(70.0F * var13 * r)));
+      }
+
+      this.updateState(context, var16[0], var16[1], var16[2], var16[3]);
+      this.helper6(context, var16, bg, (int)((225.0F + 30.0F * var13) * r));
+      if (var13 > 0.001F) {
+         context.fill((int)(var16[0] + 4.0F), (int)(var16[1] + 4.0F), (int)(var16[0] + var16[2] - 4.0F), (int)(var16[1] + var16[3] - 4.0F), helper21(-1, (int)(40.0F * var13 * r)));
+      }
+
+      float var20 = var16[0] + var16[2] / 2.0F;
+      drawCenteredText(context, title, var20, var16[1] + var16[3] - 28.0F, helper21(-1, (int)(255.0F * r)));
+      drawCenteredText(context, sub, var20, var16[1] + var16[3] - 13.0F, helper21(-1, (int)(220.0F * r)));
+   }
+
+   private void helper6(DrawContext context, float[] rc, Identifier tex, int alpha) {
+      if (tex != null && mc.getResourceManager().getResource(tex).isPresent()) {
+         float var5 = 4.0F;
+         float var6 = rc[0] + var5;
+         float var7 = rc[1] + var5;
+         float var8 = rc[2] - var5 * 2.0F;
+         float var9 = rc[3] - var5 * 2.0F;
+         float var10 = 1.7777778F;
+         float var11 = var8 / var9;
+         float var12 = 0.0F;
+         float var13 = 0.0F;
+         float var14 = 1.0F;
+         float var15 = 1.0F;
+         if (var11 > var10) {
+            float var16 = var10 / var11;
+            var13 = (1.0F - var16) / 2.0F;
+            var15 = 1.0F - var13;
+         } else {
+            float var17 = var11 / var10;
+            var12 = (1.0F - var17) / 2.0F;
+            var14 = 1.0F - var12;
+         }
+
+         this.helper7(context, tex, var6, var7, var8, var9, var12, var13, var14, var15, 8.0F, helper21(-1, alpha));
+      }
+   }
+
+   private void helper7(
+      DrawContext context, Identifier tex, float x, float y, float w, float h, float u1, float v1, float u2, float v2, float radius, int color
+   ) {
+      // TODO 1.21.11: rounded corners + tint need custom pipeline; plain blit for now
+      context.drawTexture(
+         RenderPipelines.GUI_TEXTURED, tex, (int)x, (int)y, u1, v1, (int)w, (int)h, (int)w, (int)h
+      );
+   }
+
+   private float helper8(DrawContext context, int mouseX, int mouseY, float r, float top, float dt) {
+      float var9 = 170.0F;
+      float var10 = 32.0F;
+      float var11 = this.width / 2.0F;
+      float var12 = var11 - var9 / 2.0F;
+      float var13 = top;
+      this.updateState(context, var12, var13, var9, var10);
+      if (!GlobalProfileAvatar.drawRounded(context, var12 + 7.0F, var13 + 5.0F, 22.0F, 22.0F, 11.0F, helper21(-1, (int)(255.0F * r)))) {
+         drawCenteredText(context, "e", var12 + 18.0F, var13 + 11.0F, helper21(helper20(), (int)(255.0F * r)));
+      }
+
+      drawCenteredText(context, "Выбранный аккаунт", var12 + var9 / 2.0F, var13 + 3.0F, helper21(-1, (int)(150.0F * r)));
+
+      drawCenteredText(
+         context,
+         this.helper24(null, this.helper15(), var9 - 40.0F),
+         var12 + var9 / 2.0F,
+         var13 + 15.0F,
+         helper21(-1, (int)(255.0F * r))
+      );
+
+      float var15 = var13 + var10 + 6.0F;
+      float var16 = 18.0F;
+      helper22(this.volume3, var12, var15, var9, var16);
+      boolean var17 = helper23(mouseX, mouseY, this.volume3) && !this.flag3;
+      this.animationUtils5.update(var17 ? 1.0F : 0.0F);
+      float var18 = this.animationUtils5.getValue();
+      float var19 = 1.5F * var18;
+      this.updateState(context, var12, var15, var9, var16);
+      RenderUtils.drawBlur(
+         new MatrixStack(),
+         var12 - var19,
+         var15 - var19,
+         var9 + var19 * 2.0F,
+         var16 + var19 * 2.0F,
+         5.0F,
+         helper21(helper20(), (int)(200.0F + 45.0F * var18))
+      );
+      Font var20 = helper19("sf_regular", 10);
+      drawCenteredText(
+         context, "Сменить аккаунт", var12 + var9 / 2.0F, var15 + 2.0F + var16 / 2.0F - 3.5F, helper21(-1, (int)((150.0F + 105.0F * var18) * r))
+      );
+
+      return var15 + var16;
+   }
+
+   private float helper9(DrawContext context, int mouseX, int mouseY, float r, float top, float dt) {
+      float var7 = 16.0F;
+      float var8 = 150.0F;
+      float var9 = var7;
+      float var10 = 7.0F;
+      float var11 = var9 + var10 + var8;
+      float var12 = this.width / 2.0F - var11 / 2.0F;
+      float var13 = top;
+      helper22(this.volume7, var12, var13, var9, var7);
+      boolean var14 = helper23(mouseX, mouseY, this.volume7);
+      this.animationUtils4.update(var14 ? 1.0F : 0.0F);
+      float var15 = this.animationUtils4.getValue();
+      if (var14) {
+         this.volume += dt * 160.0F;
+      }
+
+      this.updateState(context, var12, var13, var9, var7);
+      drawCenteredText(context, "h", var12 + var9 / 2.0F, var13 + 2.0F + var7 / 2.0F - 3.0F, helper21(-1, (int)(220.0F + 35.0F * var15)));
+
+      float var23 = var12 + var9 + var10;
+      helper22(this.volume5, var23, var13, var8, var7);
+      this.updateState(context, var23, var13, var8, var7);
+      float var24 = var7 + (var8 - var7) * this.volume2;
+      // TODO 1.21.11: slider track fallback is plain fill
+      context.fill((int)var23, (int)var13, (int)(var23 + var24), (int)(var13 + var7), helper21(-1, (int)((90.0F + 120.0F * this.volume2) * r)));
+      drawCenteredText(
+         context,
+         "Протяни, чтобы выйти",
+         var23 + var8 / 2.0F,
+         var13 + 2.0F + var7 / 2.0F - 3.0F,
+         helper21(-1, (int)((150.0F - 90.0F * this.volume2) * r))
+      );
+
+      float var26 = var7 - 4.0F;
+      float var21 = var23 + 2.0F + (var8 - var7) * this.volume2;
+      float var22 = var13 + 2.0F;
+      helper22(this.volume6, var21, var22, var26, var26);
+      // TODO 1.21.11: slider knob fallback is plain fill
+      context.fill((int)(var21 - 2.0F), (int)(var22 - 2.0F), (int)(var21 + var26 + 2.0F), (int)(var22 + var26 + 2.0F), helper21(-1, (int)((55.0F + 120.0F * this.volume2) * r)));
+      context.fill((int)var21, (int)var22, (int)(var21 + var26), (int)(var22 + var26), helper21(helper20(), (int)(255.0F * r)));
+      return var13 + var7;
+   }
+
+   @Override
+   public boolean mouseClicked(Click click, boolean doubled) {
+      double mouseX = click.x();
+      double mouseY = click.y();
+      int button = click.button();
+      if (button == 0) {
+         if (helper23(mouseX, mouseY, this.volume6)
+            || helper23(mouseX, mouseY, this.volume5) && this.volume2 > 0.0F) {
+            this.flag2 = true;
+            this.helper10(mouseX);
+            return true;
+         }
+
+         if (helper23(mouseX, mouseY, this.volume7)) {
+            helper25();
+            this.client.setScreen(new OptionsScreen(this, this.client.options));
+            return true;
+         }
+
+         if (helper23(mouseX, mouseY, this.volume8)) {
+            helper25();
+            this.client.setScreen(new SelectWorldScreen(this));
+            return true;
+         }
+
+         if (helper23(mouseX, mouseY, this.volume9)) {
+            helper25();
+            this.client.setScreen(new MultiplayerScreen(this));
+            return true;
+         }
+
+         for (int var6 = 0; var6 < this.value.length; var6++) {
+            if (helper23(mouseX, mouseY, this.value[var6])) {
+               this.helper16(var6);
+               return true;
+            }
+         }
+
+         if (helper23(mouseX, mouseY, this.volume3)) {
+            helper25();
+            this.client.setScreen(new AccountGuiScreen(this));
+            return true;
+         }
+      }
+
+      return super.mouseClicked(click, doubled);
+   }
+
+   @Override
+   public boolean mouseDragged(Click click, double deltaX, double deltaY) {
+      double mouseX = click.x();
+      if (this.flag2) {
+         this.helper10(mouseX);
+         return true;
+      } else {
+         return super.mouseDragged(click, deltaX, deltaY);
+      }
+   }
+
+   @Override
+   public boolean mouseReleased(Click click) {
+      if (this.flag2) {
+         this.flag2 = false;
+         if (this.volume2 >= 0.97F) {
+            this.flag3 = true;
+            this.client.scheduleStop();
+         }
+
+         return true;
+      } else {
+         return super.mouseReleased(click);
+      }
+   }
+
+   private void helper10(double mouseX) {
+      float var3 = this.volume5[0] + 2.5F;
+      float var4 = this.volume5[2] - this.volume5[3];
+      this.volume2 = MathHelper.clamp((float)(mouseX - var3) / Math.max(1.0F, var4), 0.0F, 1.0F);
+      if (this.volume2 >= 0.97F && !this.flag3) {
+         this.flag3 = true;
+         this.client.scheduleStop();
+      }
+   }
+
+   private String helper14() {
+      try {
+         return this.client.getSession().getUsername();
+      } catch (Exception var2) {
+         return "Player";
+      }
+   }
+
+   private String helper15() {
+      if (Lumen.INSTANCE != null && Lumen.INSTANCE.globalSocialManager != null) {
+         String var1 = Lumen.INSTANCE.globalSocialManager.getDisplayName();
+         if (var1 != null && !var1.isBlank()) {
+            return var1;
+         }
+      }
+
+      return this.helper14();
+   }
+
+   private void helper16(int i) {
+      helper25();
+      if (i >= 0 && i < STRING.length && STRING[i] != null && !STRING[i].isBlank()) {
+         try {
+            Util.getOperatingSystem().open(STRING[i]);
+         } catch (Exception var3) {
+         }
+      }
+   }
+
+   private static float helper17(float reveal, float start, float len) {
+      return helper18(Easings.CUBIC_OUT, (reveal - start) / len);
+   }
+
+   private static float helper18(Easing e, float x) {
+      return (float)e.ease(MathHelper.clamp(x, 0.0F, 1.0F));
+   }
+
+   private static Font helper19(String name, int size) {
+      return Fonts.getFont(name, size);
+   }
+
+   private static int helper20() {
+      try {
+         return ColorUtils.getThemeColor();
+      } catch (Exception var1) {
+         return ColorUtils.rgb(106, 145, 255);
+      }
+   }
+
+   private static int resolveInt(int i) {
+      try {
+         return ColorUtils.getThemeColor(i);
+      } catch (Exception var2) {
+         return helper20();
+      }
+   }
+
+   private static int helper21(int color, int a) {
+      return ColorUtils.setAlphaColor(color, MathHelper.clamp(a, 1, 255));
+   }
+
+   private static void helper22(float[] r, float x, float y, float w, float h) {
+      r[0] = x;
+      r[1] = y;
+      r[2] = w;
+      r[3] = h;
+   }
+
+   private static boolean helper23(double mx, double my, float[] r) {
+      return HoveringUtils.isHovered(mx, my, r[0], r[1], r[2], r[3]);
+   }
+
+   private String helper24(Font f, String s, float maxW) {
+      if (s == null) {
+         return "";
+      }
+
+      // TODO 1.21.11: ширина считается ванильным шрифтом
+      if (mc.textRenderer.getWidth(s) <= maxW) {
+         return s;
+      }
+
+      while (s.length() > 0 && mc.textRenderer.getWidth(s + "…") > maxW) {
+         s = s.substring(0, s.length() - 1);
+      }
+
+      return s + "…";
+   }
+
+   private static void helper25() {
+      try {
+         ClientSoundPlayer.playGuiClick();
+      } catch (Exception var1) {
+      }
+   }
+}
