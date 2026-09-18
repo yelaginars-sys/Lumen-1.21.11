@@ -2,7 +2,7 @@
   "providers": [
     {
       "type": "ttf",
-      "file": "lumen:fonts/ttf/sf_regular.ttf",
+      "file": "lumen:sf_regular.ttf",
       "size": 16.0,
       "oversample": 4.0,
       "shift": [0.0, 0.0],
@@ -10,7 +10,7 @@
     },
     {
       "type": "ttf",
-      "file": "lumen:fonts/ttf/test.ttf",
+      "file": "lumen:test.ttf",
       "size": 16.0,
       "oversample": 4.0,
       "shift": [0.0, 0.0],

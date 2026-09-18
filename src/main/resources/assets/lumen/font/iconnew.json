@@ -2,7 +2,7 @@
   "providers": [
     {
       "type": "ttf",
-      "file": "lumen:fonts/ttf/iconnew.ttf",
+      "file": "lumen:iconnew.ttf",
       "size": 20.0,
       "oversample": 5.0,
       "shift": [0.0, 0.0],
