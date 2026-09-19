@@ -634,17 +634,27 @@ public class ModernGui extends Screen implements QClient {
        }
     }
 
-    public void text(Font f, String s, float tx, float ty, int color) {
-       if (s != null) {
-          this.vtext(s, tx, ty, this.a(color));
-       }
-    }
+     public void text(Font f, String s, float tx, float ty, int color) {
+        // 1.21.11: рисуем тем же шрифтом, которым меряем (LumenText), иначе текст шире замера и вылезает из пилюль.
+        if (s != null) {
+           if (f != null) {
+              dlc.lumen.api.utils.render.fonts.LumenText.draw(this.ctx, f.getFont().getName(), s, tx, ty, f.getSize(), this.a(color), true);
+           } else {
+              this.vtext(s, tx, ty, this.a(color));
+           }
+        }
+     }
 
-    public void textRight(Font f, String s, float rightX, float ty, int color) {
-       if (s != null) {
-          this.vtext(s, rightX - mc.textRenderer.getWidth(s), ty, this.a(color));
-       }
-    }
+     public void textRight(Font f, String s, float rightX, float ty, int color) {
+        if (s != null) {
+           float w = f != null ? f.getWidth(s) : mc.textRenderer.getWidth(s);
+           if (f != null) {
+              dlc.lumen.api.utils.render.fonts.LumenText.draw(this.ctx, f.getFont().getName(), s, rightX - w, ty, f.getSize(), this.a(color), true);
+           } else {
+              this.vtext(s, rightX - w, ty, this.a(color));
+           }
+        }
+     }
 
     public void textCenter(Font f, String s, float centerX, float ty, int color) {
        if (s != null) {
@@ -685,12 +695,14 @@ public class ModernGui extends Screen implements QClient {
       );
    }
 
-    public void icon(String fontName, int size, String glyph, float centerX, float centerY, int color) {
-       // TODO 1.21.11: иконки MSDF требуют кастомный RenderPipeline; пока круглая точка.
-       if (glyph != null) {
-          this.rfill(centerX - 2.0F, centerY - 2.0F, 4.0F, 4.0F, 2.0F, 2.0F, 2.0F, 2.0F, color);
-       }
-    }
+     public void icon(String fontName, int size, String glyph, float centerX, float centerY, int color) {
+        // 1.21.11: рисуем иконку TTF-шрифтом через LumenText (провайдеры грузятся ванилью).
+        if (glyph != null && !glyph.isEmpty()) {
+           float w = dlc.lumen.api.utils.render.fonts.LumenText.width(fontName, glyph, size);
+           dlc.lumen.api.utils.render.fonts.LumenText.draw(
+              this.ctx, fontName, glyph, centerX - w / 2.0F, centerY - size * 0.36F, size, color, false);
+        }
+     }
 
     public void chevron(float centerX, float centerY, float size, float rotation, int color) {
        // Шеврон двумя линиями с поворотом (были GL-линии).
