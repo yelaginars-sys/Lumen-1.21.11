@@ -23,7 +23,9 @@ import net.minecraft.util.Identifier;
  */
 public final class LumenText implements QClient {
    private static final float ICON_BASE_SIZE = 20.0F;
-   private static final float TEXT_BASE_SIZE = 16.0F;
+   // Текст: Narezka шире MSDF-suisse в ~2.2 раза (замер по advances: ratio 0.46 равномерно).
+   // Делим на 35 чтобы метрики совпали с 1.21.4: пилюли, строки и сегменты влезают как раньше.
+   private static final float TEXT_BASE_SIZE = 35.0F;
 
    private LumenText() {
    }
