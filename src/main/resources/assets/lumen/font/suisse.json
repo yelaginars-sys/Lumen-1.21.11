@@ -2,9 +2,9 @@
   "providers": [
     {
       "type": "ttf",
-      "file": "lumen:sf_regular.ttf",
-      "size": 16.0,
-      "oversample": 4.0,
+      "file": "lumen:modern.ttf",
+      "size": 11.0,
+      "oversample": 8.0,
       "shift": [0.0, 0.0],
       "skip": ""
     },

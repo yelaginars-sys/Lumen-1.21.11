@@ -29,6 +29,11 @@ public abstract class MinecraftClientMixin {
    @Unique
    private int accumulatedCalls = 0;
 
+   @Inject(method = "updateWindowTitle", at = @At("TAIL"))
+   private void lumen$windowChrome(CallbackInfo ci) {
+      dlc.lumen.api.utils.client.WindowChrome.apply(MinecraftClient.getInstance());
+   }
+
    @Inject(method = "tick", at = @At("HEAD"))
    public void tick(CallbackInfo ci) throws InvocationTargetException, IllegalAccessException, InstantiationException {
       if (EventInvoker.hasListeners(EventTickPre.class)) {
