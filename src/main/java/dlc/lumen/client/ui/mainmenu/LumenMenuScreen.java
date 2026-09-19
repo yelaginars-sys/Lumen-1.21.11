@@ -171,10 +171,11 @@ public class LumenMenuScreen extends Screen implements QClient {
       RenderUtils.drawImage(matrices, TEXTURE_ID4, x, centerY - var7 / 2.0F, var7, var7, color);
    }
 
-    // TODO 1.21.11: custom MSDF fonts need pipeline rework; vanilla text fallback for menu
     private static void drawCenteredText(DrawContext context, String text, float x, float y, int color) {
-       if (text != null) {
-          context.drawCenteredTextWithShadow(mc.textRenderer, text, (int)x, (int)y, color);
+       if (text != null && !text.isEmpty()) {
+          Text t = Text.literal(text).setStyle(Style.EMPTY.withFont(new StyleSpriteSource.Font(Identifier.of("lumen", "suisse"))));
+          int w = mc.textRenderer.getWidth(t);
+          context.drawText(mc.textRenderer, t, (int)(x - w / 2.0F), (int)y, color, true);
        }
     }
 

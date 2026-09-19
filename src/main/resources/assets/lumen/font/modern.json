@@ -2,10 +2,10 @@
   "providers": [
     {
       "type": "ttf",
-      "file": "lumen:modern.ttf",
+      "file": "lumen:sfpromedium.ttf",
       "shift": [0, 0],
       "size": 11.0,
-      "oversample": 2.0
+      "oversample": 8.0
     },
     {
       "type": "reference",
