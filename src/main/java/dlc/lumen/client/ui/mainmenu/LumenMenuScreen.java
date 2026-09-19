@@ -43,6 +43,8 @@ import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.text.Style;
+import net.minecraft.text.StyleSpriteSource;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.MathHelper;
@@ -169,12 +171,19 @@ public class LumenMenuScreen extends Screen implements QClient {
       RenderUtils.drawImage(matrices, TEXTURE_ID4, x, centerY - var7 / 2.0F, var7, var7, color);
    }
 
-   // TODO 1.21.11: custom MSDF fonts need pipeline rework; vanilla text fallback for menu
-   private static void drawCenteredText(DrawContext context, String text, float x, float y, int color) {
-      if (text != null) {
-         context.drawCenteredTextWithShadow(mc.textRenderer, text, (int)x, (int)y, color);
-      }
-   }
+    // TODO 1.21.11: custom MSDF fonts need pipeline rework; vanilla text fallback for menu
+    private static void drawCenteredText(DrawContext context, String text, float x, float y, int color) {
+       if (text != null) {
+          context.drawCenteredTextWithShadow(mc.textRenderer, text, (int)x, (int)y, color);
+       }
+    }
+
+    private static void drawCenteredIconText(DrawContext context, String text, float x, float y, int color) {
+       if (text != null) {
+          Text t = Text.literal(text).setStyle(Style.EMPTY.withFont(new StyleSpriteSource.Font(Identifier.of("lumen", "icon"))));
+          context.drawCenteredTextWithShadow(mc.textRenderer, t, (int)x, (int)y, color);
+       }
+    }
 
    private void helper3(DrawContext context, float r, float time) {
       float var4 = this.width / 2.0F;
@@ -275,7 +284,7 @@ public class LumenMenuScreen extends Screen implements QClient {
       float var13 = top;
       this.updateState(context, var12, var13, var9, var10);
       if (!GlobalProfileAvatar.drawRounded(context, var12 + 7.0F, var13 + 5.0F, 22.0F, 22.0F, 11.0F, helper21(-1, (int)(255.0F * r)))) {
-         drawCenteredText(context, "e", var12 + 18.0F, var13 + 11.0F, helper21(helper20(), (int)(255.0F * r)));
+         drawCenteredIconText(context, "e", var12 + 18.0F, var13 + 11.0F, helper21(helper20(), (int)(255.0F * r)));
       }
 
       drawCenteredText(context, "Выбранный аккаунт", var12 + var9 / 2.0F, var13 + 3.0F, helper21(-1, (int)(150.0F * r)));
@@ -330,7 +339,7 @@ public class LumenMenuScreen extends Screen implements QClient {
       }
 
       this.updateState(context, var12, var13, var9, var7);
-      drawCenteredText(context, "h", var12 + var9 / 2.0F, var13 + 2.0F + var7 / 2.0F - 3.0F, helper21(-1, (int)(220.0F + 35.0F * var15)));
+      drawCenteredIconText(context, "h", var12 + var9 / 2.0F, var13 + 2.0F + var7 / 2.0F - 3.0F, helper21(-1, (int)(220.0F + 35.0F * var15)));
 
       float var23 = var12 + var9 + var10;
       helper22(this.volume5, var23, var13, var8, var7);
