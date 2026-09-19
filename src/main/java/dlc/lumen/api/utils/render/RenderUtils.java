@@ -744,8 +744,11 @@ public final class RenderUtils implements QClient {
       drawImage(matrices, Identifier.of(namespace, path), x, y, width, height, color);
    }
 
-   public static void drawSprite(MatrixStack matrices, Sprite sprite, float x, float y, float size, int color) {
-      drawTexture(matrices, sprite.getAtlasId(), x, y, size, size, sprite.getMinU(), sprite.getMinV(), sprite.getMaxU(), sprite.getMaxV(), color);
+    public static void drawSprite(MatrixStack matrices, Sprite sprite, float x, float y, float size, int color) {
+       if (sprite == null) {
+          return;
+       }
+       drawTexture(matrices, sprite.getAtlasId(), x, y, size, size, sprite.getMinU(), sprite.getMinV(), sprite.getMaxU(), sprite.getMaxV(), color);
    }
 
    public static void drawPlayerHead(MatrixStack matrices, PlayerEntity player, float x, float y, float size, float radius, float hurtPercent) {

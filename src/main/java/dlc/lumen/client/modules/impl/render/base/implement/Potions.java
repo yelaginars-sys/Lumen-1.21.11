@@ -23,8 +23,8 @@ import java.util.Set;
 import java.util.Map.Entry;
 import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.client.resource.language.I18n;
-import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -142,11 +142,17 @@ public class Potions extends InterfaceProcessing {
       return var3;
    }
 
-   private void updateState2(EventRender.Default eventRender, RegistryEntry<StatusEffect> effect, float x, float y, int size, int alpha) {
-      Sprite var7 = null;
-      int var8 = ColorUtils.rgba(255, 255, 255, alpha);
-      RenderUtils.drawSprite(new MatrixStack(), var7, x, y, size, var8);
-   }
+    private void updateState2(EventRender.Default eventRender, RegistryEntry<StatusEffect> effect, float x, float y, int size, int alpha) {
+       // 1.21.11: иконка эффекта — обычная текстура mob_effect (InGameHud.getEffectTexture),
+       // спрайтов из атласа больше нет — null Sprite ронял Interface с NPE.
+       try {
+          Identifier tex = net.minecraft.client.gui.hud.InGameHud.getEffectTexture(effect);
+          if (tex != null) {
+             RenderUtils.drawImage(new MatrixStack(), tex, x, y, size, size, ColorUtils.rgba(255, 255, 255, alpha));
+          }
+       } catch (Throwable ignored) {
+       }
+    }
 
    private void updateState3(EventRender.Default eventRender, Font font, String text, float x, float y, int color) {
       int var7 = ColorUtils.rgba(20, 20, 20, 145);

@@ -20,12 +20,10 @@ public final class MenuBackground implements QClient {
    }
 
    public static void render(DrawContext context, int width, int height) {
-      // TODO 1.21.11: фон-шейдер недоступен, рисуем запечённый арт напрямую
-      if (mc.getResourceManager().getResource(MENU_BG).isPresent()) {
-         context.drawTexture(
-            net.minecraft.client.gl.RenderPipelines.GUI_TEXTURED, MENU_BG, 0, 0, 0.0F, 0.0F, width, height, width, height
-         );
-      } else if (!helper()) {
+      // Рандомные обои на запуск (кадры из minecraft-wallpapers), фолбэк — градиент.
+      try {
+         MenuWallpapers.render(context, width, height);
+      } catch (Throwable var3) {
          context.fillGradient(0, 0, width, height, ColorUtils.rgb(12, 18, 32), ColorUtils.rgb(26, 36, 58));
       }
    }

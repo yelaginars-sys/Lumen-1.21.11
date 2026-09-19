@@ -11,6 +11,7 @@ import dlc.lumen.api.utils.render.fonts.msdf.Font;
 import dlc.lumen.api.utils.render.fonts.msdf.Fonts;
 import dlc.lumen.api.utils.scissor.ScissorUtils;
 import dlc.lumen.client.ui.mainmenu.MenuBackground;
+import dlc.lumen.client.ui.mainmenu.MenuWallpapers;
 import dlc.lumen.client.ui.mainmenu.account.generator.MainGenerator;
 import dlc.lumen.mixin.IMinecraftClientAccessor;
 import java.lang.reflect.Constructor;
@@ -77,7 +78,8 @@ public final class AccountGuiScreen extends Screen implements QClient {
    @Override
    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
       MatrixStack var5 = new MatrixStack();
-      RenderUtils.drawRoundedRect(var5, 0.0F, 0.0F, this.width, this.height, 0.0F, ColorUtils.rgb(9, 10, 15));
+      MenuWallpapers.render(context, this.width, this.height);
+      context.fill(0, 0, this.width, this.height, 0x78090A0F);
       MenuParticles.render(context, this.width, this.height, mouseX, mouseY, 1.0F);
       float var6 = this.width / 2.0F - 200.0F;
       float var7 = this.height / 2.0F - 80.0F + 40.0F;

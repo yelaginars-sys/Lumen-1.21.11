@@ -64,7 +64,9 @@
     "PortalManagerMixin",
     "PlayerListHudAccessor",
     "EntityCollisionPredictionInvoker",
-    "WorldTickerAccessor"
+    "WorldTickerAccessor",
+    "VanillaMenuWallpaperMixin",
+    "PressableWidgetMixin"
   ],
   "injectors": {
     "defaultRequire": 1
