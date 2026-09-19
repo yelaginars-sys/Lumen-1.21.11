@@ -13,8 +13,8 @@ import net.minecraft.util.Identifier;
  */
 public final class MenuWallpapers {
    private static final int COUNT = 10;
-   private static final int TEX_W = 1920;
-   private static final int TEX_H = 1080;
+   private static final int TEX_W = 1280;
+   private static final int TEX_H = 720;
    private static volatile Identifier current;
 
    private MenuWallpapers() {
@@ -24,7 +24,7 @@ public final class MenuWallpapers {
       Identifier id = current;
       if (id == null) {
          int n = new Random().nextInt(COUNT);
-         id = Identifier.of("lumen", "textures/menu_bg/wall_" + (n < 10 ? "0" + n : String.valueOf(n)) + ".jpg");
+         id = Identifier.of("lumen", "textures/menu_bg/wall_" + (n < 10 ? "0" + n : String.valueOf(n)) + ".png");
          current = id;
       }
       return id;
