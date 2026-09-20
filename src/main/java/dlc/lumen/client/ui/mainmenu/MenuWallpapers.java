@@ -98,12 +98,7 @@ public final class MenuWallpapers {
       }
       try {
          Identifier tex = currentFrame();
-         float scale = Math.max(width / (float) TEX_W, height / (float) TEX_H);
-         float visW = width / scale;
-         float visH = height / scale;
-         float u = (TEX_W - visW) / 2.0F;
-         float v = (TEX_H - visH) / 2.0F;
-         context.drawTexture(RenderPipelines.GUI_TEXTURED, tex, 0, 0, u, v, width, height, TEX_W, TEX_H);
+         dlc.lumen.api.utils.render.RenderUtils.drawTexture(new net.minecraft.client.util.math.MatrixStack(), tex, 0, 0, width, height, 0.0F, 0.0F, 1.0F, 1.0F, -1);
       } catch (Throwable var6) {
          context.fillGradient(0, 0, width, height, ColorUtils.rgb(12, 18, 32), ColorUtils.rgb(26, 36, 58));
       }
