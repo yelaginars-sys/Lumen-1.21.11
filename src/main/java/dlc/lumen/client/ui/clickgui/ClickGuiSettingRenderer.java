@@ -209,6 +209,8 @@ public class ClickGuiSettingRenderer {
          state,
          this.helper23(floatSetting)
       );
+      float valW = this.helper24(12).getWidth(var15);
+      RenderUtils.drawRoundedRect(new MatrixStack(), var17 - 4.0F, settingY - 1.5F, valW + 8.0F, 10.0F, 2.5F, ColorUtils.rgba(16, 18, 24, Math.max(0, alpha - 160)));
       this.helper24(12).drawString(new MatrixStack(), var15, var17, settingY + 1.0F, ColorUtils.setAlphaColor(colorTheme, alpha));
       float var21 = settingY + 8.35F - 7.0F;
       int var22 = ColorUtils.rgba(93, 99, 115, alpha);
