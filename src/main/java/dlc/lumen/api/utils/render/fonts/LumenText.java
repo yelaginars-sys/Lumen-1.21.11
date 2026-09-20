@@ -40,12 +40,11 @@ public final class LumenText implements QClient {
          case "icon" -> Identifier.of("lumen", "icon");
          case "icon1" -> Identifier.of("lumen", "icon1");
          case "iconnew" -> Identifier.of("lumen", "iconnew");
-         // icons/iconz без TTF — фолбэк на monoton: буквы-иконки совпадают частично,
-         // остальное добьёт missing-glyph. Лучше, чем ванильные буквы вместо иконок.
          case "icons", "iconz" -> Identifier.of("lumen", "icon");
-         // Текстовые шрифты — кастомный TTF (Narezka + фолбэк), а не дефолт ванилы.
-         // Иначе весь HUD рисуется ванильным шрифтом.
-         case "suisse", "inter_medium", "sf_regular", "narezka", "lumen", "logo", "wave", "energy", "tyzik", "wonderful" ->
+         case "sf_regular" -> Identifier.of("lumen", "sf_regular");
+         case "inter_medium", "modern" -> Identifier.of("lumen", "inter_medium");
+         case "narezka" -> Identifier.of("lumen", "narezka");
+         case "suisse", "lumen", "logo", "wave", "energy", "tyzik", "wonderful" ->
             Identifier.of("lumen", "suisse");
          default -> null;
       };
