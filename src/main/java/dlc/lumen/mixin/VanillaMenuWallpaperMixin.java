@@ -27,10 +27,15 @@ public abstract class VanillaMenuWallpaperMixin {
    @Inject(method = "renderBackground", at = @At("HEAD"), cancellable = true)
    private void lumen$menuWallpaper(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
       Object self = this;
+      String className = self.getClass().getName();
       if (self instanceof MultiplayerScreen
          || self instanceof SelectWorldScreen
          || self instanceof OptionsScreen
-         || self instanceof DownloadingTerrainScreen) {
+         || self instanceof DownloadingTerrainScreen
+         || className.contains("ConnectScreen")
+         || className.contains("ProgressScreen")
+         || className.contains("LevelLoadingScreen")
+         || className.contains("MessageScreen")) {
          MenuWallpapers.render(context, this.width, this.height);
          context.fill(0, 0, this.width, this.height, 0x78090A0F);
          ci.cancel();

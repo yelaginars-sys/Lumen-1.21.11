@@ -74,15 +74,23 @@ public final class MenuWallpapers {
          lastFrameIndex = frameIndex;
          File frameFile = files[frameIndex];
          try (FileInputStream fis = new FileInputStream(frameFile)) {
-            NativeImage image = NativeImage.read(fis);
+            NativeImage newImg = NativeImage.read(fis);
             MinecraftClient mc = MinecraftClient.getInstance();
             if (mc != null && mc.getTextureManager() != null) {
-               if (dynamicTexture != null) {
-                  mc.getTextureManager().destroyTexture(DYNAMIC_TEX_ID);
-                  dynamicTexture.close();
+               if (dynamicTexture == null || dynamicTexture.getImage() == null || dynamicTexture.getImage().getWidth() != newImg.getWidth() || dynamicTexture.getImage().getHeight() != newImg.getHeight()) {
+                  if (dynamicTexture != null) {
+                     mc.getTextureManager().destroyTexture(DYNAMIC_TEX_ID);
+                     dynamicTexture.close();
+                  }
+                  dynamicTexture = new NativeImageBackedTexture(() -> "lumen-wallpaper-frame", newImg);
+                  mc.getTextureManager().registerTexture(DYNAMIC_TEX_ID, dynamicTexture);
+               } else {
+                  dynamicTexture.getImage().copyFrom(newImg);
+                  dynamicTexture.upload();
+                  newImg.close();
                }
-               dynamicTexture = new NativeImageBackedTexture(() -> "lumen-wallpaper-frame", image);
-               mc.getTextureManager().registerTexture(DYNAMIC_TEX_ID, dynamicTexture);
+            } else {
+               newImg.close();
             }
          } catch (Throwable t) {
             t.printStackTrace();
@@ -98,8 +106,10 @@ public final class MenuWallpapers {
       }
       try {
          Identifier tex = currentFrame();
-         dlc.lumen.api.utils.render.RenderUtils.drawTexture(new net.minecraft.client.util.math.MatrixStack(), tex, 0, 0, width, height, 0.0F, 0.0F, 1.0F, 1.0F, -1);
-      } catch (Throwable var6) {
+         if (tex != null) {
+            context.drawTexture(RenderPipelines.GUI_TEXTURED, tex, 0, 0, 0.0F, 0.0F, width, height, width, height);
+         }
+      } catch (Throwable t) {
          context.fillGradient(0, 0, width, height, ColorUtils.rgb(12, 18, 32), ColorUtils.rgb(26, 36, 58));
       }
    }
