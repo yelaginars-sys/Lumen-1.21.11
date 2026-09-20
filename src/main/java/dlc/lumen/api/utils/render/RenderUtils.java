@@ -695,17 +695,16 @@ public final class RenderUtils implements QClient {
           Identifier ftex = texture;
           withHudContext(
              matrices,
-             ctx -> ctx.drawTexture(
-                net.minecraft.client.gl.RenderPipelines.GUI_TEXTURED,
+             ctx -> ctx.drawTexturedQuad(
                 ftex,
                 Math.round(fx),
                 Math.round(fy),
+                Math.round(fx + fw),
+                Math.round(fy + fh),
                 u1,
                 v1,
-                Math.round(fw),
-                Math.round(fh),
-                Math.round(fw),
-                Math.round(fh)
+                u2,
+                v2
              )
           );
           return;

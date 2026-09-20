@@ -162,13 +162,9 @@ public class LumenMenuScreen extends Screen implements QClient {
       RenderUtils.drawBlur(var6, x + 0.25F, y, w - 0.5F, h, 8.0F, 5.0F, ColorUtils.rgba(0, 0, 0, 195));
    }
 
-   private static void updateState2(MatrixStack matrices, float x, float centerY, float h, int color) {
-      float var5 = h * 0.22F;
-      float var6 = h * 0.18F;
+   private static void updateState2(DrawContext context, float x, float centerY, float h, int color) {
       float var7 = h;
-      float var8 = h * 0.55F;
-      float var9 = var5 * 0.5F;
-      RenderUtils.drawImage(matrices, TEXTURE_ID4, x, centerY - var7 / 2.0F, var7, var7, color);
+      context.drawTexture(RenderPipelines.GUI_TEXTURED, TEXTURE_ID4, (int)x, (int)(centerY - var7 / 2.0F), 0.0F, 0.0F, (int)var7, (int)var7, (int)var7, (int)var7);
    }
 
     private static void drawCenteredText(DrawContext context, String text, float x, float y, int color) {
@@ -192,7 +188,7 @@ public class LumenMenuScreen extends Screen implements QClient {
       float var6 = Math.max(34.0F, this.height * 0.13F) + var5 + (1.0F - r) * -8.0F;
       float var7 = 40.0F * (0.9F + 0.1F * r);
       float var8 = var7 * 1.02F;
-      updateState2(new MatrixStack(), var4 - var8 / 2.0F, var6 + var7 / 2.0F, var7, helper21(helper20(), (int)(255.0F * r)));
+      updateState2(context, var4 - var8 / 2.0F, var6 + var7 / 2.0F, var7, helper21(helper20(), (int)(255.0F * r)));
       var6 += var7 + 6.0F;
       drawCenteredText(context, "Lumen DLC", var4, var6, helper21(-1, (int)(255.0F * r)));
       var6 += 12.0F;
