@@ -1,33 +1,95 @@
 package dlc.lumen.client.ui.mainmenu;
 
 import dlc.lumen.api.utils.color.ColorUtils;
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.Random;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.texture.NativeImage;
+import net.minecraft.client.texture.NativeImageBackedTexture;
 import net.minecraft.util.Identifier;
 
 /**
- * Рандомные обои меню: один случайный фон на запуск игры.
- * Кадры 1920x1080 из D:\minecraft-wallpapers (mp4 не крутятся в MC, берём кадры).
- * Рисуем cover-crop (без растяжек) на титле, аккаунтах, настройках, сетевой и одиночной.
+ * Рандомный видео-фон без потери качества: при каждом запуске выбирается один из MP4 видеофайлов
+ * из D:\minecraft-wallpapers (aquarium, beach, cherry-grove, deserts, falling-snow, farm-morning,
+ * fireplace, glowing-caves, rainy-swamp, serene-snow).
+ * 
+ * Отрисовывается анимация 25 FPS во всех меню клиента: Title Screen, Account Manager, Singleplayer, Multiplayer, Loading Screen.
  */
 public final class MenuWallpapers {
-   private static final int COUNT = 10;
+   private static final Identifier DYNAMIC_TEX_ID = Identifier.of("lumen", "textures/menu_bg/dynamic_video");
    private static final int TEX_W = 1280;
    private static final int TEX_H = 720;
-   private static volatile Identifier current;
+   private static final int FPS = 25;
+
+   private static volatile NativeImageBackedTexture dynamicTexture;
+   private static volatile File[] frameFiles;
+   private static volatile long startTime = -1L;
+   private static volatile int lastFrameIndex = -1;
+   private static boolean initialized = false;
 
    private MenuWallpapers() {
    }
 
-   public static Identifier current() {
-      Identifier id = current;
-      if (id == null) {
-         int n = new Random().nextInt(COUNT);
-         id = Identifier.of("lumen", "textures/menu_bg/wall_" + (n < 10 ? "0" + n : String.valueOf(n)) + ".png");
-         current = id;
+   private static synchronized void init() {
+      if (initialized) {
+         return;
       }
-      return id;
+      initialized = true;
+
+      try {
+         File cacheDir = new File(System.getProperty("user.home"), ".lumen/wallpaper_cache");
+         File[] subDirs = cacheDir.listFiles(File::isDirectory);
+         
+         if (subDirs != null && subDirs.length > 0) {
+            File chosenDir = subDirs[new Random().nextInt(subDirs.length)];
+            File[] files = chosenDir.listFiles((dir, name) -> name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".png"));
+            if (files != null && files.length > 0) {
+               java.util.Arrays.sort(files, (a, b) -> a.getName().compareTo(b.getName()));
+               frameFiles = files;
+               startTime = System.currentTimeMillis();
+            }
+         }
+      } catch (Throwable t) {
+         t.printStackTrace();
+      }
+   }
+
+   private static Identifier currentFrame() {
+      if (!initialized) {
+         init();
+      }
+
+      File[] files = frameFiles;
+      if (files == null || files.length == 0) {
+         return Identifier.of("lumen", "textures/mainmenu/single_bg.png");
+      }
+
+      long elapsed = System.currentTimeMillis() - startTime;
+      int frameIndex = (int) ((elapsed / (1000 / FPS)) % files.length);
+
+      if (frameIndex != lastFrameIndex || dynamicTexture == null) {
+         lastFrameIndex = frameIndex;
+         File frameFile = files[frameIndex];
+         try (FileInputStream fis = new FileInputStream(frameFile)) {
+            NativeImage image = NativeImage.read(fis);
+            MinecraftClient mc = MinecraftClient.getInstance();
+            if (mc != null && mc.getTextureManager() != null) {
+               if (dynamicTexture != null) {
+                  mc.getTextureManager().destroyTexture(DYNAMIC_TEX_ID);
+                  dynamicTexture.close();
+               }
+               dynamicTexture = new NativeImageBackedTexture(() -> "lumen-wallpaper-frame", image);
+               mc.getTextureManager().registerTexture(DYNAMIC_TEX_ID, dynamicTexture);
+            }
+         } catch (Throwable t) {
+            t.printStackTrace();
+         }
+      }
+
+      return DYNAMIC_TEX_ID;
    }
 
    public static void render(DrawContext context, int width, int height) {
@@ -35,12 +97,13 @@ public final class MenuWallpapers {
          return;
       }
       try {
-         float scale = Math.max(width / (float)TEX_W, height / (float)TEX_H);
+         Identifier tex = currentFrame();
+         float scale = Math.max(width / (float) TEX_W, height / (float) TEX_H);
          float visW = width / scale;
          float visH = height / scale;
          float u = (TEX_W - visW) / 2.0F;
          float v = (TEX_H - visH) / 2.0F;
-         context.drawTexture(RenderPipelines.GUI_TEXTURED, current(), 0, 0, u, v, width, height, TEX_W, TEX_H);
+         context.drawTexture(RenderPipelines.GUI_TEXTURED, tex, 0, 0, u, v, width, height, TEX_W, TEX_H);
       } catch (Throwable var6) {
          context.fillGradient(0, 0, width, height, ColorUtils.rgb(12, 18, 32), ColorUtils.rgb(26, 36, 58));
       }
