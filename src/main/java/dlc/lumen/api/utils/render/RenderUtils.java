@@ -693,19 +693,38 @@ public final class RenderUtils implements QClient {
        if (currentContext != null) {
           float fx = x, fy = y, fw = width, fh = height;
           Identifier ftex = texture;
+          int fcolor = color;
           withHudContext(
              matrices,
-             ctx -> ctx.drawTexturedQuad(
-                ftex,
-                Math.round(fx),
-                Math.round(fy),
-                Math.round(fx + fw),
-                Math.round(fy + fh),
-                u1,
-                v1,
-                u2,
-                v2
-             )
+             ctx -> {
+                if (u1 == 0.0F && v1 == 0.0F && u2 == 1.0F && v2 == 1.0F) {
+                   ctx.drawTexture(
+                      net.minecraft.client.gl.RenderPipelines.GUI_TEXTURED,
+                      ftex,
+                      Math.round(fx),
+                      Math.round(fy),
+                      0.0F,
+                      0.0F,
+                      Math.round(fw),
+                      Math.round(fh),
+                      Math.round(fw),
+                      Math.round(fh),
+                      fcolor
+                   );
+                } else {
+                   ctx.drawTexturedQuad(
+                      ftex,
+                      Math.round(fx),
+                      Math.round(fy),
+                      Math.round(fx + fw),
+                      Math.round(fy + fh),
+                      u1,
+                      v1,
+                      u2,
+                      v2
+                   );
+                }
+             }
           );
           return;
        }
